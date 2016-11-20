@@ -1,0 +1,14 @@
+<div id="instructions">
+click cb1;
+text val false,false;
+
+click cb1;
+text val true,true;
+</div>
+
+<input type="checkbox" id="cb1" data-xbind="val">v1<br>
+<input checked="${!val}" type="checkbox" id="cb2" disabled="${!val}" >v1<br>
+
+<div id="val">
+${document.getElementById('cb2').checked},${document.getElementById('cb2').disabled}
+</div>

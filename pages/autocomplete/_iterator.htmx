@@ -1,0 +1,24 @@
+<div id="instructions">
+type i_0 tes;
+wait 300;
+down i_0 1;
+enter i_0;
+text val 2///;
+
+type i_1 thr;
+wait 300;
+enter  i_1;
+text val 2/3//;
+
+type i_2 asdf;
+wait 300;
+enter  i_2;
+text val 2/3//;
+</div>
+
+<div data-xiterator-list="objList" data-xiterator-var="objItem" data-xiterator-indexvar="i">
+	<input id="i_${i}" data-xtype="autocomplete" data-xac-fn="acFn" data-xac-itemvar="item" data-xbind="objItem.val"
+		data-xac-desc-input-scr="item.name" data-xac-desc-scr="item.name">
+</div>
+
+<div data-xiterator-list="objList" data-xiterator-var="objItem" data-xiterator-indexvar="i" id="val">${objItem.val ? objItem.val.code : ''}/</div>

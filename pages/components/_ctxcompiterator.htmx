@@ -1,0 +1,31 @@
+<div id="instructions">
+text val1;
+text val2;
+text val3;
+
+click b1;
+click b1;
+text val1 //;
+text val2;
+text val3;
+
+click b2;
+text val1 //;
+text val2 /;
+text val3;
+
+click b3;
+click b3;
+click b3;
+text val1 //;
+text val2 /;
+text val3 ///;
+</div>
+
+<div data-xiterator-list="list" data-xiterator-indexvar="i" data-xiterator-var="item">
+
+<ctx click="appendBar(i)" id="b${i + 1}"/>
+<div id="val${i + 1}">${item.val}</div>
+
+</div>
+${JSON.stringify(list)}

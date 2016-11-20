@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>no template</title>
+<style id="st1">
+body {background-color:lightgrey;}
+h1   {color:blue;}
+p    {color:green;}
+</style>
+</head>
+<body>
+	<div id="instructions">
+	notfound tpl;
+	found st1;
+	</div>
+	<H1>No template page</H1>
+	<p>no template page</p>
+	
+	<div id="load">Loaded:true</div>
+</body>
+</html>

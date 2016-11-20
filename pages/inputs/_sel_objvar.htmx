@@ -1,0 +1,33 @@
+<div id="instructions">
+select s1 1;
+value s2 val1;
+text val val1;
+
+select s2 2;
+value s1 val2;
+text val val2;
+
+select s1 0;
+value s2;
+text val;
+</div>
+
+Values: 
+	<select data-xbind="obj.val" id="s1">
+		<option></option>
+		<option value="val1">val1</option>
+		<option value="val2">val2</option>
+		<option value="val3">val3</option>
+	</select>
+	<br>
+	
+Values: 
+	<select data-xbind="obj.val" id="s2">
+		<option></option>
+		<option value="val1">val1</option>
+		<option value="val2">val2</option>
+		<option value="val3">val3</option>
+	</select>
+	<br>
+
+<div id="val">${obj.val}</div><br>

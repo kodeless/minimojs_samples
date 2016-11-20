@@ -1,0 +1,5 @@
+<template-info path="tpl2.html"/>
+<div id="instructions">
+text tpl tpl2;
+</div>
+Template info

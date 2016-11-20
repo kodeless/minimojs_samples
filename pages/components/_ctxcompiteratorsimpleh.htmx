@@ -1,0 +1,30 @@
+<div id="instructions">
+text val1;
+text val2;
+text val3;
+
+click b1;
+click b1;
+text val1 //;
+text val2;
+text val3;
+
+click b2;
+text val1 //;
+text val2 /;
+text val3;
+
+click b3;
+click b3;
+click b3;
+text val1 //;
+text val2 /;
+text val3 ///;
+</div>
+
+<xiterator list="list" indexvar="i" var="item">
+
+<ctx click="appendBar(i)" id="b${i + 1}"/>
+<div id="val${i + 1}">${item}</div>
+
+</xiterator>

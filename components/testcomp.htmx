@@ -1,0 +1,18 @@
+<div style="border: 1px solid black;">
+    <button onclick="selfcomp.toggleShow()">
+        $if(selfcomp.shouldShowContent()){
+        Hide
+        }
+        $if(!selfcomp.shouldShowContent()){
+        Show
+        }
+    </button>
+    $if(selfcomp.shouldShowContent()){
+    <span style="color: red">{xbody}</span>
+    }
+    !boolVal: ${selfcomp.boolval}
+    strVal + " text": ${selfcomp.strval + " text"}
+    numVal + 10: ${selfcomp.numval + 10}
+    <br>
+    show: ${selfcomp.shouldShowContent()}
+</div>

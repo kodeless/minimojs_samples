@@ -1,0 +1,23 @@
+<div id="instructions">
+type i 1234;
+click b1;
+wait 1000;
+
+type im asdf;
+text val 1234;
+text valm asdf;
+
+click closeModalButton;
+click b2;
+wait 1000;
+
+text valm 1234;
+type im asdf;
+text val 1234asdf;
+text valm 1234asdf;
+</div>
+
+main obj.val: <text bind="obj.val" id="i"><br>
+main val: <div id="val">${obj.val}</div>
+<button onclick="show(false)" id="b1">Show Modal</button>
+<button onclick="show(true)" id="b2">Show Linked</button>

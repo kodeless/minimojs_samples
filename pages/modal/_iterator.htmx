@@ -1,0 +1,18 @@
+<div id="instructions">
+text val false;
+text valm 0:4/1:5/2:6/;
+
+click c1;
+
+text val true;
+text valm 0:1/1:2/2:3/;
+
+click c1;
+
+text val false;
+text valm 0:4/1:5/2:6/;
+</div>
+
+main obj.val: <input data-xbind="check" id="c1" type="checkbox" onchange="switchList()"><br>
+main val: <div id="val">${check}</div>
+<div id="divmodal" style="border-style: solid"></div>

@@ -1,0 +1,35 @@
+<div id="instructions">
+text val_0_0;
+text val_0_1;
+text val_1_0;
+text val_1_1;
+
+click b_0_0;
+click b_0_0;
+click b_0_0;
+text val_0_0 ///;
+text val_0_1;
+text val_1_0;
+text val_1_1;
+
+click b_1_1;
+click b_1_1;
+text val_0_0 ///;
+text val_0_1;
+text val_1_0;
+text val_1_1 //;
+
+click b_0_1;
+text val_0_0 ///;
+text val_0_1 /;
+text val_1_0;
+text val_1_1 //;
+</div>
+
+<div data-xiterator-list="list" data-xiterator-indexvar="i" data-xiterator-var="item">
+
+<div data-xiterator-list="item" data-xiterator-indexvar="ii" data-xiterator-var="iitem">
+${i},${ii}:<ctx click="appendBar(i, ii)" id="b_${i}_${ii}"/>
+<div id="val_${i}_${ii}">${iitem.val}</div>
+</div>
+</div>

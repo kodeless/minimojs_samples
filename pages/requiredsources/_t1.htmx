@@ -1,0 +1,5 @@
+<requires src="/js/test3.js"/>
+<div id="instructions">
+text val required;
+</div>
+<div id="val">${testRequired()}</div>

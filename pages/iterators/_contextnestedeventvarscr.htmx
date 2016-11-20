@@ -1,0 +1,49 @@
+<div id="instructions">
+text val 1-a/11-aa/111-aaa/2-b/22-bb/222-bbb/3-c/33-cc/333-ccc/;
+
+type i_0_0 1;
+text changed 11/0/0/(i)/(ii);
+type i_0_1 11;
+text changed 1111/1/0/(i)/(ii);
+type i_0_2 111;
+text changed 111111/2/0/(i)/(ii);
+
+text val 11-a/1111-aa/111111-aaa/2-b/22-bb/222-bbb/3-c/33-cc/333-ccc/;
+
+type i_1_0 2;
+text changed 22/0/1/(i)/(ii);
+type i_1_1 22;
+text changed 2222/1/1/(i)/(ii);
+type i_1_2 222;
+text changed 222222/2/1/(i)/(ii);
+
+text val 11-a/1111-aa/111111-aaa/22-b/2222-bb/222222-bbb/3-c/33-cc/333-ccc/;
+
+type i_2_0 3;
+text changed 33/0/2/(i)/(ii);
+type i_2_1 33;
+text changed 3333/1/2/(i)/(ii);
+type i_2_2 333;
+text changed 333333/2/2/(i)/(ii);
+
+text val 11-a/1111-aa/111111-aaa/22-b/2222-bb/222222-bbb/33-c/3333-cc/333333-ccc/
+</div>
+
+<span  id="val1">
+$for (item in list with i){
+	${i}:${item.code}
+	$for (innerItem in item.list with ii){
+		${ii}:${innerItem.code}<input data-xbind="innerItem.val" id="i_${i}_${ii}" onkeyup="change(innerItem, ii, i)">
+	}
+	<br>
+}
+</span>
+<div id="val">
+$for (item in list){
+	$for (innerItem in item.list){
+${innerItem.val}-${innerItem.code}/
+	}
+}
+</div>
+
+<div id="changed">${obj.val}/${index}/${parentIndex}/${i}/${ii}</div>

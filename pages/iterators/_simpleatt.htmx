@@ -1,0 +1,15 @@
+<div id="instructions">
+attr tr_0 color blue;
+attr tr_1 color white;
+attr tr_2 color blue;
+attr tr_3 color white;
+</div>
+
+<span id="val0">${item}</span><br>
+<table data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i" id="val1">
+	<tr style="background-color:${i%2==0?'blue':'white'};" color="${i%2==0?'blue':'white'}" id="tr_${i}">
+		<td>${i || ""}</td>
+		<td>${item || ''}</td>
+	</tr>
+</table>
+

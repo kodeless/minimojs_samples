@@ -1,0 +1,15 @@
+<div id="instructions">
+type i_0 1;
+text val 1,,,;
+
+type i_1 2;
+text val 1,2,,;
+
+type i_2 3;
+text val 1,2,3,;
+</div>
+
+<div data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i">
+<text id="i_${i}" bind="item.val"/>
+</div>
+<div data-xiterator-list="list" data-xiterator-var="item" id="val">${item.val},</div>

@@ -1,0 +1,9 @@
+<requires src="/css/test1.css"/>
+<div id="instructions">
+wait 200;
+text val 100;
+</div>
+<div id="d">
+Test CSS
+</div>
+<div id="val">${document.getElementById('d').offsetWidth}</div>

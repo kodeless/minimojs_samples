@@ -1,0 +1,18 @@
+<div id="instructions">
+type i1 asdf;
+type im1 qwer;
+text val asdf;
+text valm qwer;
+
+type im1 xxx;
+text val asdf;
+text valm qwerxxx;
+
+type i1 yyy;
+text val asdfyyy;
+text valm qwerxxx;
+</div>
+
+main obj.val: <text bind="val" id="i1"><br>
+main val: <div id="val">${val}</div>
+<div id="divmodal" style="border-style: solid"></div>

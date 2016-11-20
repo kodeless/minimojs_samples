@@ -1,0 +1,12 @@
+<html>
+	<head>
+		<style>
+		body{
+			background-color: ${color};
+		}
+		</style>
+	</head>
+	<body>
+		<input data-xbind="color">
+	</body>
+</html>

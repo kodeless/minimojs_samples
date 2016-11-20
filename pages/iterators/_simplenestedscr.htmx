@@ -1,0 +1,38 @@
+<div id="instructions">
+text val 1-a/11-aa/111-aaa/2-b/22-bb/222-bbb/3-c/33-cc/333-ccc/;
+
+type i_0_0 1;
+type i_0_1 11;
+type i_0_2 111;
+
+text val 11-a/1111-aa/111111-aaa/2-b/22-bb/222-bbb/3-c/33-cc/333-ccc/;
+
+type i_1_0 2;
+type i_1_1 22;
+type i_1_2 222;
+
+text val 11-a/1111-aa/111111-aaa/22-b/2222-bb/222222-bbb/3-c/33-cc/333-ccc/;
+
+type i_2_0 3;
+type i_2_1 33;
+type i_2_2 333;
+
+text val 11-a/1111-aa/111111-aaa/22-b/2222-bb/222222-bbb/33-c/3333-cc/333333-ccc/
+</div>
+
+<span id="val1">
+$for (item in list with i){
+	${i}:${item.code}
+	$for (innerItem in item.list with ii){
+		${ii}:${innerItem.code}<input data-xbind="innerItem.val" id="i_${i}_${ii}">
+	}
+	<br>
+}
+</span>
+<div id="val">
+$for (item in list){
+	$for (innerItem in item.list){
+${innerItem.val}-${innerItem.code}/
+	}
+}
+</div>

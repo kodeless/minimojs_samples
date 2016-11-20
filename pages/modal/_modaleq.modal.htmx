@@ -1,0 +1,4 @@
+Modal EQ<br>
+modal obj.val: <input data-xbind="val" id="i"><br>
+
+modal val: <div id="valeq">${val}</div>

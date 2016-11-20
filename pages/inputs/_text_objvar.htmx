@@ -1,0 +1,16 @@
+<div id="instructions">
+type inputEl 123;
+text val 123;
+value inputEl2 123;
+
+type inputEl2 234;
+text val 123234;
+value inputEl 123234;
+</div>
+
+obj.val: <input data-xbind="obj.val" id="inputEl"><br>
+obj.val: <input data-xbind="obj.val" id="inputEl2"><br>
+<div id="val">
+${obj.val}
+</div>
+<br>

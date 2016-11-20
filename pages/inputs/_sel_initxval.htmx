@@ -1,0 +1,61 @@
+<div id="instructions">
+value s1 val1;
+value s2 val3;
+value s0 val2; 
+
+select s1 3;
+value s1 val3;
+value s2 val3;
+value s0 val2;
+text val1 3;
+text val2 Val3;
+text val 2;
+
+select s2 2;
+value s1 val3;
+value s2 val2;
+value s0 val2;
+text val1 3;
+text val2 Val2;
+text val 2;
+
+select s0 0;
+value s1 val3;
+value s2 val2;
+value s0;
+text val1 3;
+text val2 Val2;
+text val;
+</div>
+
+Values for obj.val: 
+	<select data-xbind="obj.val" id="s1">
+		<option></option>
+		<option data-xvalue="list[0]">val1</option>
+		<option data-xvalue="list[1]">val2</option>
+		<option data-xvalue="list[2]">val3</option>
+	</select>
+	<br>
+	
+Values for obj.val2: 
+	<select data-xbind="obj.val2" id="s2">
+		<option></option>
+		<option data-xvalue="list[0]">val1</option>
+		<option data-xvalue="list[1]">val2</option>
+		<option data-xvalue="list[2]">val3</option>
+	</select>
+	<br>
+
+Values for val: 
+		<select data-xbind="val" id="s0">
+		<option></option>
+		<option data-xvalue="list[0]">val1</option>
+		<option data-xvalue="list[1]">val2</option>
+		<option data-xvalue="list[2]">val3</option>
+	</select>
+	<br>
+	
+
+<div id="val1">${obj && obj.val ? obj.val.code : "Empty"}</div><br>
+<div id="val2">${obj && obj.val2 ? obj.val2.value : "Empty"}</div><br>
+<div id="val">${val && val.code ? val.code : ""}</div><br>

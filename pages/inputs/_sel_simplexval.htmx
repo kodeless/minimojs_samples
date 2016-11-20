@@ -1,0 +1,37 @@
+<div id="instructions">
+select s1 1;
+value s2 val1;
+text code 1;
+text value Val1;
+
+select s2 2;
+value s1 val2;
+text code 2;
+text value Val2;
+
+select s1 0;
+value s2;
+text code [];
+text value [];
+</div>
+
+Values: 
+	<select data-xbind="val" id="s1">
+		<option></option>
+		<option data-xvalue="list[0]">val1</option>
+		<option data-xvalue="list[1]">val2</option>
+		<option data-xvalue="list[2]">val3</option>
+	</select>
+	<br>
+	
+Values: 
+	<select data-xbind="val" id="s2">
+		<option></option>
+		<option data-xvalue="list[0]">val1</option>
+		<option data-xvalue="list[1]">val2</option>
+		<option data-xvalue="list[2]">val3</option>
+	</select>
+	<br>
+
+<div id="code">${val ? val.code : '[]'}</div><br>
+<div id="value">${val ? val.value : '[]'}</div><br>

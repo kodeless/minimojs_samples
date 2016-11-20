@@ -1,0 +1,13 @@
+<div id="instructions">
+click cb1;
+attr v v true;
+attr v v2 "asdf";
+
+click cb1;
+attr v v false;
+attr v v2 'asdf';
+</div>
+<input type="checkbox" id="cb1" data-xbind="val">v1<br>
+<div v="${val}" v2="${val?'\"asdf\"':\"'asdf'\"}" id="v">
+v=${document.getElementById("v").getAttribute("v")}, v2=${document.getElementById("v").getAttribute("v2")}
+</div>

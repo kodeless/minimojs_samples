@@ -1,0 +1,30 @@
+<div id="instructions">
+text val 0:Item0,1:Item1,2:Item2,3:Item3,;
+click add;
+text val 0:Item0,1:Item1,2:Item2,3:Item3,4:Item4,;
+click remove_2;
+text val 0:Item0,1:Item1,2:Item3,3:Item4,;
+click remove_0;
+text val 0:Item1,1:Item3,2:Item4,;
+click recreate;
+text val 0:Item0,1:Item1,2:Item2,3:Item3,;
+click remove_0;
+click remove_0;
+click remove_0;
+click remove_0;
+text val;
+click recreate;
+text val 0:Item0,1:Item1,2:Item2,3:Item3,;
+</div>
+
+<span id="val">
+    $for (item in list with i){
+        ${i}:${item},
+    }
+</span>
+<br>
+<button id="add" onclick="add()">Add</button><br>
+<button id="recreate" onclick="recreate()">Recreate</button><br>
+$for (item in list with i){
+<button onclick="remove(${i})" id="remove_${i}">Remove ${item}</button>
+}

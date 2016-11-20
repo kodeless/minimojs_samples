@@ -1,0 +1,16 @@
+<div id="instructions">
+text val 0;
+click dv;
+
+text val 1;
+click dv;
+
+text val 2;
+click dv;
+
+text val 3;
+</div>
+<div style="background-color: blue;" onclick="clickevt()" id="dv">
+div
+</div>
+<div id="val">${val}</div>

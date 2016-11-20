@@ -1,0 +1,45 @@
+<div id="instructions">
+text val;
+text val1;
+text val2;
+
+type i 1234;
+text val 1234;
+text val1;
+text val2;
+
+type i1 2345;
+text val 1234;
+text val1 2345;
+text val2;
+
+type i2 3456;
+text val 1234;
+text val1 2345;
+text val2 3456;
+
+click link;
+text val 1234;
+text val1 1234;
+text val2 1234;
+
+type i 11;
+text val 123411;
+text val1 123411;
+text val2 123411;
+
+type i1 22;
+text val 12341122;
+text val1 12341122;
+text val2 12341122;
+
+del i2 3;
+text val 12341;
+text val1 12341;
+text val2 12341;
+</div>
+
+main obj.val: <input data-xbind="obj.val" id="i"><br>
+main val: <div id="val">${obj.val}</div>
+<button onclick="link()" id="link">Link All</button>
+<div id="divmodalnested" style="border-style: solid"></div>

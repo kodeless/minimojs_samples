@@ -1,0 +1,52 @@
+<div id="instructions">
+value t01 val1;
+type t0 123;
+value t01 val1123;
+
+type t1 234;
+type t2 345;
+type t3 456;
+
+text v0 val1123;
+text v1 val2234;
+text v2 val3345;
+text v3 val4456;
+
+value t02;
+type t4 123;
+value t02 123;
+
+type t5 234;
+type t6 345;
+type t7 456;
+
+text v4 123;
+text v5 234;
+text v6 345;
+text v7 456;
+</div>
+
+<input data-xbind="obj.textList[0][0].val" id="t0">
+<input data-xbind="obj.textList[0][1].val" id="t1">
+<input data-xbind="obj.textList[1][0].val" id="t2">
+<input data-xbind="obj.textList[1][1].val" id="t3">
+<br>
+<input data-xbind="obj.textList2[0][0].val" id="t4">
+<input data-xbind="obj.textList2[0][1].val" id="t5">
+<input data-xbind="obj.textList2[1][0].val" id="t6">
+<input data-xbind="obj.textList2[1][1].val" id="t7">
+<br>
+<input data-xbind="obj.textList[0][0].val" id="t01">
+<input data-xbind="obj.textList2[0][0].val" id="t02">
+<br>
+<div id="v0">${obj.textList[0][0].val}</div>
+<div id="v1">${obj.textList[0][1].val}</div>
+<div id="v2">${obj.textList[1][0].val}</div>
+<div id="v3">${obj.textList[1][1].val}</div>
+
+<div id="v4">${obj.textList2[0][0].val}</div>
+<div id="v5">${obj.textList2[0][1].val}</div>
+<div id="v6">${obj.textList2[1][0].val}</div>
+<div id="v7">${obj.textList2[1][1].val}</div>
+<br>
+${X.stringify(obj)}

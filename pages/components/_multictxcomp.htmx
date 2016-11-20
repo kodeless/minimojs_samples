@@ -1,0 +1,43 @@
+<div id="instructions">
+text pg 0;
+text inc1 0;
+text inc2 0;
+text inc3 0;
+text bdc1 BodyC1;
+text bdc2 BodyC2;
+text bdc3 BodyC3;
+
+click bc1;
+text pg 0;
+text inc1 1;
+text inc2 0;
+text inc3 0;
+
+click bc2;
+click bc2;
+click bc2;
+text pg 0;
+text inc1 1;
+text inc2 3;
+text inc3 0;
+
+click bc3;
+click bc3;
+text pg 0;
+text inc1 1;
+text inc2 3;
+text inc3 2;
+</div>
+
+<pageCtx>
+Test ctx<br>
+<innerCtx id="c1">
+	<div id="bdc1">BodyC1</div><br>
+	<innerCtx id="c2">
+		<div id="bdc2">BodyC2</div><br>
+	</innerCtx>
+</innerCtx>
+<innerCtx id="c3">
+	<div id="bdc3">BodyC3</div><br>
+</innerCtx>
+</pageCtx>

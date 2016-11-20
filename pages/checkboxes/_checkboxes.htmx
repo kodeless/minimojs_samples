@@ -1,0 +1,21 @@
+<div id="instructions">
+    text d1 false;
+    click i1;
+    text d1 true;
+    click ii0;
+    text d2 v1;
+    click ii1;
+    text d2 v1,v2;
+    click ii0;
+    click ii2;
+    text d2 v2,v3;
+
+</div>
+Bool <input data-xbind="obj.bool" type="checkbox" id="i1"><br>
+$for(item in list with i){
+v${i}: <input data-xbind="obj.lista" type="checkbox" id="ii${i}" data-xvalue="item"><br>
+}
+
+<div id="d1">${obj.bool}</div><br>
+<div id="d2">${obj.lista}</div>
+<div id="d3">${JSON.stringify(obj)}</div>

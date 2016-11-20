@@ -1,0 +1,8 @@
+<requires src="/js/test3.js"/>
+<requires src="/js/test2.js"/>
+<div id="instructions">
+text val required;
+text val2 true;
+</div>
+<div id="val">${testRequired()}</div>
+<div id="val2">${window.test2}</div>

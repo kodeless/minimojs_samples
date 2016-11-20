@@ -1,0 +1,37 @@
+<div id="instructions">
+attr c1 checked true;
+attr c2 checked;
+attr c0 checked false;
+
+click c1;
+attr c1 checked false;
+attr c2 checked false;
+attr c0 checked false;
+text val1 false;
+text val2 false;
+text val false;
+
+click c2;
+attr c1 checked false;
+attr c2 checked true;
+attr c0 checked false;
+text val1 false;
+text val2 true;
+text val false;
+
+click c0;
+attr c1 checked false;
+attr c2 checked true;
+attr c0 checked true;
+text val1 false;
+text val2 true;
+text val true;
+</div>
+
+obj.val: <input type="checkbox" data-xbind="obj.val" id="c1"><br>
+obj.val2: <input type="checkbox" data-xbind="obj.val2" id="c2"><br>
+val: <input type="checkbox" data-xbind="val" id="c0"><br>
+
+<div id="val1">${obj.val}</div><br>
+<div id="val2">${obj.val2}</div><br>
+<div id="val">${val}</div><br>

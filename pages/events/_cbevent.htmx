@@ -1,0 +1,13 @@
+<div id="instructions">
+click cb;
+
+text val type:change,expected:change/type:click,expected:click/type:focus,expected:focus;
+
+click cb2;
+
+text val type:blur,expected:blur/type:change,expected:change/type:change,expected:change/type:click,expected:click/type:click,expected:click/type:focus,expected:focus/type:focus,expected:focus;
+
+</div>
+<input type="checkbox" onclick="clickevt()" onchange="changeevt()" onfocus="focusevt()" onblur="blurevt()" id="cb">
+<input type="checkbox" onclick="clickevt()" onchange="changeevt()" onfocus="focusevt()" onblur="blurevt()" id="cb2">
+<div id="val">${val.join('/')}</div>

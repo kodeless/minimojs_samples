@@ -1,0 +1,5 @@
+<h1>SPA2</h1>
+<h2>Esta pagina usa o template padrao definiso em x.properties porque nao tem tag html</h2>
+Parametro para a proxima pagina: <input data-xbind="parametro"><br>
+<a href="javascript:X.go('/exemplos/spa2.html', {parametroTest: parametro})">spa2</a><br>
+<a href="/exemplos/exemplo1.html">exemplo1</a><br>

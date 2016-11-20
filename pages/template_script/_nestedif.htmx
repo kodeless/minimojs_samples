@@ -1,0 +1,24 @@
+<div id="instructions">
+    text d;
+    type t s;
+    text d;
+    type t how;
+    text d Mostrando:Test;
+    click c;
+    text d Mostrando:Testok;
+    del t 1;
+    text d;
+    type t w;
+    text d Mostrando:Testok;
+</div>
+<input id="t" type="text" data-xbind="val"/>
+<input type="checkbox" id="c" data-xbind="val2"/>
+<br>
+<div id="d">
+$if(val == "show"){
+    Mostrando:<b>Test</b>
+    $if(val2){
+        ok
+    }
+}
+</div>

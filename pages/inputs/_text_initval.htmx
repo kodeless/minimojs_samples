@@ -1,0 +1,34 @@
+<div id="instructions">
+value e1 val;
+value e2 obj.val;
+value e3 obj.val2;
+
+type e1 123;
+text val val123;
+value e2 obj.val;
+value e3 obj.val2;
+text obj.val obj.val;
+text obj.val2 obj.val2;
+
+type e2 234;
+text obj.val obj.val234;
+value e1 val123;
+value e3 obj.val2;
+text val val123;
+text obj.val2 obj.val2;
+
+type e3 345;
+text obj.val2 obj.val2345;
+value e1 val123;
+value e2 obj.val234;
+text val val123;
+text obj.val obj.val234;
+</div>
+
+val: <input data-xbind="val" id="e1"><br>
+obj.val: <input data-xbind="obj.val" id="e2"><br>
+obj.val2: <input data-xbind="obj.val2" id="e3"><br>
+
+<div id="val">${val}</div><br>
+<div id="obj.val">${obj.val}</div><br>
+<div id="obj.val2">${obj.val2}</div><br>

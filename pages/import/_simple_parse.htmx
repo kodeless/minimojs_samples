@@ -1,0 +1,18 @@
+<div id="instructions">
+text val 1;
+text ival impval;
+
+type i 234;
+text val 1234;
+text ival impval;
+
+click b;
+text val 1234;
+text ival 1234;
+</div>
+
+<input data-xbind="val" id="i">
+<button onclick="i.setVal(val)" id="b">Set on i</button>
+<br>
+<div id="val">${val}</div>
+<div id="ival">${i.getVal()}</div>

@@ -1,0 +1,3 @@
+modal obj.val: <text bind="val" id="im1"><br>
+
+modal val: <div id="valm">${val}</div>

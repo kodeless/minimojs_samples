@@ -1,0 +1,33 @@
+<div id="instructions">
+text val;
+text i1val impvalnested;
+text i2val impval;
+
+type i 1234;
+text val 1234;
+text i1val impvalnested;
+text i2val impval;
+
+click b1;
+text val 1234;
+text i1val 1234;
+text i2val impval;
+
+type i xxx;
+text val 1234xxx;
+text i1val 1234;
+text i2val impval;
+
+click b2;
+text val 1234xxx;
+text i1val 1234;
+text i2val 1234xxx;
+</div>
+
+<input data-xbind="val" id="i">
+<button onclick="i.setVal(val)" id="b1">Set on i</button>
+<button onclick="i.setNestedVal(val)" id="b2">Set on nested i</button>
+<br>
+<div id="val">${val}</div>
+<div id="i1val">${i.getVal()}</div>
+<div id="i2val">${i.getNestedVal()}</div>

@@ -1,0 +1,3 @@
+<input data-xbind="obj.val1">
+<input data-xbind="obj.val2">
+${X.stringify(obj)}

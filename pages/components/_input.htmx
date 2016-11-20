@@ -1,0 +1,10 @@
+<div id="instructions">
+type i 123;
+text val 123;
+
+type i 234;
+text val 123234;
+</div>
+
+<text bind="val" id="i"/>
+<div id="val">${val}</div>

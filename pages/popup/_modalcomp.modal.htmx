@@ -1,0 +1,4 @@
+<modal-info width="500" height="300" title="Popup test"></modal-info>
+modal obj.val: <text bind="obj.val" id="im"><br>
+
+modal val: <div id="valm">${obj.val}</div>

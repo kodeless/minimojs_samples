@@ -1,0 +1,19 @@
+<div id="instructions">
+text val1;
+text val2;
+
+click b1;
+click b1;
+text val1 //;
+text val2;
+
+click b2;
+text val1 //;
+text val2 /;
+</div>
+
+<ctx click="appendBar(1)" id="b1"/>
+<div id="val1">${val1}</div>
+
+<ctx click="appendBar(2)" id="b2"/>
+<div id="val2">${val2}</div>

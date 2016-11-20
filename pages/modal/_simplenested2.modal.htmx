@@ -1,0 +1,4 @@
+Simple nested 2<br>
+modal obj.val: <input data-xbind="obj.val" id="i2"><br>
+
+modal val: <div id="val2">${obj.val}</div>

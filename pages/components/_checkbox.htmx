@@ -1,0 +1,7 @@
+<div id="instructions">
+text val false;
+click cb;
+text val true;
+</div>
+<checkbox bind="val" label="Check Box" id="cb"/>
+<div id="val">${val}</div>

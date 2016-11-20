@@ -1,0 +1,66 @@
+<div id="instructions">
+text val a1txt0-true-one/a1txt1-false-two/a1txt2-true-;
+text val2 t1/t2/t3;
+text val3 true/false/true;
+text val4 one//two;
+
+type i1 1;
+click i2;
+select i3 2;
+
+text val a1txt01-false-two/a1txt1-false-two/a1txt2-true-;
+
+type i4 2;
+click i5;
+select i6 0;
+
+text val a1txt01-false-two/a1txt12-true-/a1txt2-true-;
+
+type i7 1;
+type i8 2;
+
+text val2 t11/t22/t3;
+
+click i9;
+click i10;
+
+text val3 false/true/true;
+
+select i11 0;
+select i12 2;
+
+text val4 /two/two;
+
+</div>
+array[0].txt: <input data-xbind="array[0].txt" id="i1"><br>
+array[0].bol: <input type="checkbox"data-xbind="array[0].bol" id="i2"><br>
+array[0].sel: <select data-xbind="array[0].sel" id="i3">
+				<option></option>
+				<option data-xvalue="list[0]">${list[0].desc}</option>
+				<option data-xvalue="list[1]">${list[1].desc}</option>
+			  </select><br>
+array[1].txt: <input data-xbind="array[1].txt" id="i4"><br>
+array[1].bol: <input type="checkbox"data-xbind="array[1].bol" id="i5"><br>
+array[1].sel: <select data-xbind="array[1].sel" id="i6">
+				<option></option>
+				<option data-xvalue="list[0]">${list[0].desc}</option>
+				<option data-xvalue="list[1]">${list[1].desc}</option>
+			  </select><br>
+array2[0]: <input data-xbind="array2[0]" id="i7"><br>
+array2[1]: <input data-xbind="array2[1]" id="i8"><br>
+array3[0]: <input type="checkbox"data-xbind="array3[0]" id="i9"><br>
+array3[1]: <input type="checkbox"data-xbind="array3[1]" id="i10"><br>
+array4[0].sel: <select data-xbind="array4[0]" id="i11">
+				<option></option>
+				<option data-xvalue="list[0]">${list[0].desc}</option>
+				<option data-xvalue="list[1]">${list[1].desc}</option>
+			  </select><br>
+array4[1].sel: <select data-xbind="array4[1]" id="i12">
+				<option></option>
+				<option data-xvalue="list[0]">${list[0].desc}</option>
+				<option data-xvalue="list[1]">${list[1].desc}</option>
+			  </select><br>
+val:<div id="val">${printArray()}</div>
+val2:<div id="val2">${printArray2()}</div>
+val3:<div id="val3">${printArray3()}</div>
+val4:<div id="val4">${printArray4()}</div>

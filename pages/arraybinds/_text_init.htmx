@@ -1,0 +1,25 @@
+<div id="instructions">
+text v0 val1;
+text v1 val2;
+text v2;
+
+type t0 1;
+value t01 val11;
+
+type t1 2;
+type t2 3;
+
+text v0 val11;
+text v1 val22;
+text v2 3;
+</div>
+
+<input data-xbind="obj.textList[0]" id="t0">
+<input data-xbind="obj.textList[1]" id="t1">
+<input data-xbind="obj.textList[2]" id="t2">
+
+<input data-xbind="obj.textList[0]" id="t01">
+
+<div id="v0">${obj.textList[0]}</div>
+<div id="v1">${obj.textList[1]}</div>
+<div id="v2">${obj.textList[2]}</div>

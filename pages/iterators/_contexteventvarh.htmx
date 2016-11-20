@@ -1,0 +1,39 @@
+<div id="instructions">
+click b_0;
+text clicked Item0/0;
+text val Item0,true/Item1,false/Item2,true/Item3,false/;
+
+type i_0 123;
+text val Item0123,true/Item1,false/Item2,true/Item3,false/;
+text clicked Item0123/0;
+
+click b_2;
+text clicked Item2/2;
+
+click recreate;
+text clicked Item2/2;
+
+click b_3;
+text clicked Item3/3;
+
+type i_3 11;
+text clicked Item311/3;
+</div>
+
+<xiterator list="list" var="item" indexvar="i">
+	<input id="i_${i}" data-xbind="item.val">
+	<button id="b_${i}" onclick="click(item, i)" type="checkbox">${item.val}</button>
+	<br>
+</xiterator>
+<br>
+<button id="add" onclick="add()">Add</button><br>
+<button id="recreate" onclick="recreate()">Recreate</button><br>
+<xiterator list="list" var="item" indexvar="i">
+	<button onclick="remove(${i})" id="remove_${i}">Remove ${item.val}</button>
+</xiterator>
+<div id="val">
+<xiterator list="list" var="item">
+	${item.val},${item.bool}/
+</xiterator>
+</div>
+<div id="clicked">${clicked.obj.val}/${clicked.index}</div>

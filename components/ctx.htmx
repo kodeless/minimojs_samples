@@ -1,0 +1,1 @@
+<button onclick="this.increaseCount();" id="${this.id}">Count: ${count}</button>

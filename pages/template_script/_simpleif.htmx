@@ -1,0 +1,14 @@
+<div id="instructions">
+text d;
+type t s;
+text d;
+type t how;
+text d Mostrando:Test;
+</div>
+<input id="t" type="text" data-xbind="val"/>
+<br>
+<div id="d">
+$if(val == "show"){
+    Mostrando:<b>Test</b>
+}
+</div>

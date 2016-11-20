@@ -1,0 +1,33 @@
+<h1>Esta pagina tem tag html portanto nao tem template e nao é spa</h1>
+
+Nome: <input data-xbind="pessoa.dados.nome"><br>
+Sexo: <select data-xbind="pessoa.dados.sexo">
+    <option data-xvalue="null"></option>
+    $for(sexo in listaSexo){
+        <option data-xvalue="sexo">${sexo.nome}</option>
+    }
+    </select><br>
+<input type="checkbox" data-xbind="pessoa.gostaDeFilmes">Gosta de filmes<br>
+Interesses: <select data-xbind="pessoa.interesses" multiple>
+    $for(interesse in listaInteresse){
+        <option>${interesse}</option>
+    }
+</select><br>
+$if(pessoa && pessoa.dados && pessoa.dados.nome!='Valle'){
+    JSON: ${imported.json()}
+    <h1 style="color: ${pessoa && pessoa.dados && pessoa.dados.sexo && pessoa.dados.sexo.id == 0 ? 'black' : 'red'}">asdf</h1>
+}
+<br>
+<button onclick="setPessoaNoModal()">Jogar pessoa no modal</button><br>
+<div style="border-style: solid" id="modalDiv"></div>
+
+<br>
+<button onclick="adicionarPessoa()">Adicionar pessoa na tabela</button><br>
+<actiontable list="pessoaList" id="tb">
+    <column title="">index</column>
+    <column title="Nome">item.dados.nome</column>
+    <column title="Sexo">item.dados.sexo.nome</column>
+    <column title="Gosta de filmes">item.gostaDeFilmes ? 'Sim' : 'Nao'</column>
+</actiontable>
+
+<a href="/exemplos/spa1.html">spa1</a>

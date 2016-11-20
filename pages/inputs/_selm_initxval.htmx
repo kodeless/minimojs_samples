@@ -1,0 +1,46 @@
+<div id="instructions">
+select s1 3;
+text val1 1,3;
+text val2 Val3;
+text val 2;
+
+select s2 2;
+text val1 1,3;
+text val2 Val2,Val3;
+text val 2;
+
+select s0 0;
+text val1 1,3;
+text val2 Val2,Val3;
+text val 1,2;
+</div>
+Values for obj.val:
+	<select data-xbind="obj.val" id="s1" multiple>
+		<option></option>
+		<option data-xvalue="list[0]">val1</option>
+		<option data-xvalue="list[1]">val2</option>
+		<option data-xvalue="list[2]">val3</option>
+	</select>
+	<br>
+	
+Values for obj.val2: 
+	<select data-xbind="obj.val2" id="s2" multiple>
+		<option></option>
+		<option data-xvalue="list[0]">val1</option>
+		<option data-xvalue="list[1]">val2</option>
+		<option data-xvalue="list[2]">val3</option>
+	</select>
+	<br>
+
+Values for val: 
+	<select data-xbind="val" id="s0" multiple>
+		<option data-xvalue="list[0]">val1</option>
+		<option data-xvalue="list[1]">val2</option>
+		<option data-xvalue="list[2]">val3</option>
+	</select>
+	<br>
+	
+
+<div id="val1">${printVal1()}</div><br>
+<div id="val2">${printVal2()}</div><br>
+<div id="val">${printVal()}</div><br>

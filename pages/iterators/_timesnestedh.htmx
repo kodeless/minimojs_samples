@@ -1,0 +1,5 @@
+<div id="instructions">
+text val (0:0,1,2,)(1:0,1,2,)(2:0,1,2,)(3:0,1,2,)(4:0,1,2,);
+</div>
+
+<span id="val"><xiterator count="x" indexvar="i" id="val">(${i}:<xiterator count="y" indexvar="ii">${ii},</xiterator>)</xiterator></span>

@@ -1,0 +1,1 @@
+<div id="valm" style="border-style: solid" data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i">${i}:${item}/</div>
