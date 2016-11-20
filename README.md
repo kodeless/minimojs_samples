@@ -4,12 +4,12 @@
 On this project we have lots of demonstration and test pages. It is being prepared the runner to run the selenium pages (it is in another project right now).
 
 This project has the structure of a minimojs project with the folders:
- - components: with reusable htmx components
- - error-pages: pages for html errors
- - labels: replaceable strings for htmx text
- - res: static resources such as css, third parth js (jquery, etc), images, etc...
- - templates: html templates for pages and modal windows
- - pages: htmx pages and its js resources
+ - __components__: reusable htmx components
+ - __error-pages__: pages for html errors
+ - __labels__: replaceable strings for htmx text
+ - __res__: static resources such as css, third parth js (jquery, etc), images, etc...
+ - __templates__: html templates for pages and modal windows
+ - __pages__: htmx pages and its js resources
 
 Most of the htmx pages are selenium tests. On exemplos folder there are some pure htmx examples.
 
