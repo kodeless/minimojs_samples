@@ -4,8 +4,6 @@
 On this project we have lots of demonstration and test pages. It is being prepared the runner to run the selenium pages (it is in another project right now).
 
 This project has the structure of a minimojs project with the folders:
-
-minimojs_samples root folder
  - components: with reusable htmx components
  - error-pages: pages for html errors
  - labels: replaceable strings for htmx text
