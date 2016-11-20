@@ -11,18 +11,18 @@ This project has the structure of a minimojs project with the folders:
  - __templates__: html templates for pages and modal windows
  - __pages__: htmx pages and its js resources
 
-Most of the htmx pages are selenium tests. On exemplos folder there are some pure htmx examples.
+Most of the htmx pages are selenium tests. On __exemplos__ folder there are some pure htmx examples.
 
 ##Compile the project
 
 To compile the project, first generate the executable jar from minimojs project:
  - On the minimojs folder run:
-mvn clean compile assembly:single
+__mvn clean compile assembly:single__
  - This will generate the minimojs-0.0.1-jar-with-dependencies.jar inside target folder of minimojs root folder.
--On the terminal, go to the folder where you have the structure folders of a minimojs project (and where this file is located).
+ - On the terminal, go to the folder where you have the structure folders of a minimojs project (and where this file is located).
  - Execute the command:
-java -jar /patht-to-minimo-jar/minimojs-0.0.1-jar-with-dependencies.jar -d /destination-path
+__java -jar /patht-to-minimo-jar/minimojs-0.0.1-jar-with-dependencies.jar -d /destination-path__
  - This will generate the compiled html files on destination-path
  - To access the pages, the generated html files must be on a apache, ngix or any other webserver to server the pages. Then just access the pages as normal html files.
  - To see other options of the minimojs compiler run:
-java -jar /patht-to-minimo-jar/minimojs-0.0.1-jar-with-dependencies.jar --help
+__java -jar /patht-to-minimo-jar/minimojs-0.0.1-jar-with-dependencies.jar --help__
