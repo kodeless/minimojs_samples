@@ -19,10 +19,12 @@ To compile the project, first generate the executable jar from minimojs project:
  - On the minimojs folder run:
 __mvn clean compile assembly:single__
  - This will generate the minimojs-0.0.1-jar-with-dependencies.jar inside target folder of minimojs root folder.
- - On the terminal, go to the folder where you have the structure folders of a minimojs project (and where this readme file is located).
+ - On a terminal, go to the folder where you have the structure folders of a minimojs project (and where this readme file is located).
  - Execute the command:
 __java -jar /patht-to-minimo-jar/minimojs-0.0.1-jar-with-dependencies.jar -d /destination-path__
  - This will generate the compiled html files on __destination-path__ folder.
  - To access the pages, the generated html files must be on a apache, ngix or any other webserver to serve the pages. Then just access the pages as normal html files.
  - To see other options of the minimojs compiler run:
 __java -jar /patht-to-minimo-jar/minimojs-0.0.1-jar-with-dependencies.jar --help__
+
+__OBS__: To avoid the generation of html5 application file (that caches all the files on the client) set an environment variable __XDEVMODE=true__. For development mode, it saves some time.
