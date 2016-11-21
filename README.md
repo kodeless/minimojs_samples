@@ -23,7 +23,7 @@ __mvn clean compile assembly:single__
  - Execute the command:
 __java -jar /patht-to-minimo-jar/minimojs-0.0.1-jar-with-dependencies.jar -d /destination-path__
  - This will generate the compiled html files on __destination-path__ folder.
- - To access the pages, the generated html files must be on a apache, ngix or any other webserver to serve the pages. Then just access the pages as normal html files.
+ - To access the pages, the generated html files must be on a apache, nginx or any other webserver to serve the pages. Then just access the pages as normal html files.
  - To see other options of the minimojs compiler run:
 __java -jar /patht-to-minimo-jar/minimojs-0.0.1-jar-with-dependencies.jar --help__
 
