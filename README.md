@@ -5,7 +5,6 @@ On this project we have lots of demonstration and test pages. It is being prepar
 
 This project has the structure of a minimojs project with the folders:
  - __components__: reusable htmx components
- - __error-pages__: pages for html errors
  - __labels__: replaceable strings for htmx text
  - __res__: static resources such as css, third parth js (jquery, etc), images, etc...
  - __templates__: html templates for pages and modal windows
