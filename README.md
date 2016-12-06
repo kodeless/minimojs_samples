@@ -1,4 +1,4 @@
-# minimojs_samples
+# minimojs samples
 ##Sample and test pages
 
 On this project we have lots of demonstration and test pages. It is being prepared the runner to run the selenium pages (it is in another project right now).
