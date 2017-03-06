@@ -1,5 +1,5 @@
 <h1>SPA1</h1>
 <h2>Esta pagina usa o template padrao definiso em x.properties porque nao tem tag html</h2>
 Valor parametro passado: ${parametro}<br>
-<a href="/exemplos/spa1.html">spa1</a><br>
-<a href="/exemplos/exemplo1.html">exemplo1</a><br>
+<a href="{webctx}/exemplos/spa1.html">spa1</a><br>
+<a href="{webctx}/exemplos/exemplo1.html">exemplo1</a><br>

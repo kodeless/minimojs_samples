@@ -30,4 +30,4 @@ $if(pessoa && pessoa.dados && pessoa.dados.nome!='Valle'){
     <column title="Gosta de filmes">item.gostaDeFilmes ? 'Sim' : 'Nao'</column>
 </actiontable>
 
-<a href="/exemplos/spa1.html">spa1</a>
+<a href="{webctx}/exemplos/spa1.html">spa1</a>
