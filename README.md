@@ -1,4 +1,4 @@
-# minimojs_samples
+# minimojs samples
 ##Sample and test pages
 
 On this project we have lots of demonstration and test pages. It is being prepared the runner to run the selenium pages (it is in another project right now).
@@ -26,4 +26,4 @@ __java -jar /patht-to-minimo-jar/minimojs-0.0.1-jar-with-dependencies.jar -d /de
  - To see other options of the minimojs compiler run:
 __java -jar /patht-to-minimo-jar/minimojs-0.0.1-jar-with-dependencies.jar --help__
 
-__OBS__: To avoid the generation of html5 application file (that caches all the files on the client) set an environment variable __XDEVMODE=true__. For development mode, it saves some time.
+__OBS__: To avoid the generation of html5 application file cache (that caches all the files on the client) set an environment variable __XDEVMODE=true__. For development mode, it saves some time.
