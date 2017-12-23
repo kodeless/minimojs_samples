@@ -7,7 +7,7 @@ body {background-color:lightgrey;}
 h1   {color:blue;}
 p    {color:green;}
 </style>
-<script src="{webctx}/js/test1.js"></script>
+<script src="/js/test1.js"></script>
 </head>
 <body>
 	<div id="instructions">
@@ -15,7 +15,7 @@ p    {color:green;}
 	text test1 true;
 	text test2 true;
 	</div>
-	<script src="{webctx}/js/test2.js"></script>
+	<script src="/js/test2.js"></script>
 	<H1>No template page</H1>
 	<p>no template page</p>
 	test1: <div id="test1">${window.test1}</div>

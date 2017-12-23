@@ -14,11 +14,11 @@ text v1 val22;
 text v2 3;
 </div>
 
-<input data-xbind="obj.textList[0]" id="t0">
-<input data-xbind="obj.textList[1]" id="t1">
-<input data-xbind="obj.textList[2]" id="t2">
+<input bind="obj.textList[0]" id="t0">
+<input bind="obj.textList[1]" id="t1">
+<input bind="obj.textList[2]" id="t2">
 
-<input data-xbind="obj.textList[0]" id="t01">
+<input bind="obj.textList[0]" id="t01">
 
 <div id="v0">${obj.textList[0]}</div>
 <div id="v1">${obj.textList[1]}</div>

@@ -13,17 +13,17 @@ text val2 red;
 </div>
 <div id="dv" style="background-color: ${color};">x</div>
 <br>
-<select data-xbind="color" id="sel">
+<select bind="color" id="sel">
 	<option>blue</option>
 	<option>yellow</option>
 	<option>red</option>
 </select>
 <div id="val">${document.getElementById('dv').style.backgroundColor}</div>
-<div id="dv2" 
+<div id="dv2"
 	style="background-color: ${opt == 1 ? 'red' : opt == 2 ? 'blue' : 'white'};
 	border-style:${opt == 1 ? \"dashed\" : opt == 2 ? \"dotted\" : \"double\"}">y</div>
 <br>
-<select data-xbind="opt" id="sel2">
+<select bind="opt" id="sel2">
 	<option>1</option>
 	<option>2</option>
 	<option>3</option>

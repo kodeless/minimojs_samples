@@ -17,7 +17,7 @@ text val 1234asdf;
 text valm 1234asdf;
 </div>
 
-main obj.val: <input data-xbind="obj.val" id="i"><br>
+main obj.val: <input bind="obj.val" id="i"><br>
 main val: <div id="val">${obj.val}</div>
 <button onclick="show(false)" id="b1">Show Modal</button>
 <button onclick="show(true)" id="b2">Show Linked</button>

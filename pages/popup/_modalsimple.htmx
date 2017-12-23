@@ -1,4 +1,4 @@
 <modal-info width="500" height="300" title="Popup test"></modal-info>
-modal obj.val: <input data-xbind="obj.val" id="im"><br>
+modal obj.val: <input bind="obj.val" id="im"><br>
 
 modal val: <div id="valm">${obj.val}</div>

@@ -1,4 +1,4 @@
-<template-info path="tpl_test.html"/>
+<template-info path="tpl_test.htmx"/>
 <div id="p1">Page2</div>
 <a href="/spa/_p1">p1</a><br>
 <a href="/spa/_p3">p3</a>

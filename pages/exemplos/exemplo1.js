@@ -1,6 +1,6 @@
 //import:/exemplos/import
 var imported;
-//modal:/exemplos/modal,modalDiv,toggle
+
 var modal;
 
 var listaSexo = [{
@@ -16,6 +16,7 @@ var listaSexo = [{
 var listaInteresse = ['TECNOLOGIA', 'NEGOCIOS', 'MEIO_AMBIENTE'];
 var pessoaList = [];
 var pessoa;
+var count = 1;
 
 function onInit(){
     imported.setVal(pessoa);

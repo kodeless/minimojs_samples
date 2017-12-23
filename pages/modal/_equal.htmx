@@ -8,7 +8,7 @@ text val1 asdf;
 text val2 qwer;
 </div>
 
-main obj.val: <input data-xbind="val" id="i"><br>
+main obj.val: <input bind="val" id="i"><br>
 main val: <div id="val">${val}</div>
 main valeq1: <div id="val1">${modal1._('valeq').textContent}</div>
 main valeq2: <div id="val2">${modal2._('valeq').textContent}</div>

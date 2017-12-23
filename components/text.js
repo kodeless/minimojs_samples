@@ -1,3 +1,6 @@
-function getHtml(comp){
-	return '<input type="text" data-xbind="' + comp.bind + '" id="' + comp.id + '">';
+function defineAttributes(types){
+  return {
+    "id": types.mandatory.string,
+    "bind": types.mandatory.bind
+  }
 }

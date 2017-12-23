@@ -11,9 +11,9 @@
     text d2 v2,v3;
 
 </div>
-Bool <input data-xbind="obj.bool" type="checkbox" id="i1"><br>
+Bool <input bind="obj.bool" type="checkbox" id="i1"><br>
 $for(item in list with i){
-v${i}: <input data-xbind="obj.lista" type="checkbox" id="ii${i}" data-xvalue="item"><br>
+v${i}: <input bind="obj.lista" type="checkbox" id="ii${i}" data-xvalue="item"><br>
 }
 
 <div id="d1">${obj.bool}</div><br>

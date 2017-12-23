@@ -25,9 +25,9 @@ text val val123;
 text obj.val obj.val234;
 </div>
 
-val: <input data-xbind="val" id="e1"><br>
-obj.val: <input data-xbind="obj.val" id="e2"><br>
-obj.val2: <input data-xbind="obj.val2" id="e3"><br>
+val: <input bind="val" id="e1"><br>
+obj.val: <input bind="obj.val" id="e2"><br>
+obj.val2: <input bind="obj.val2" id="e3"><br>
 
 <div id="val">${val}</div><br>
 <div id="obj.val">${obj.val}</div><br>

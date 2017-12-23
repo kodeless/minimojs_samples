@@ -10,11 +10,11 @@ text v1 234;
 text v2 345;
 </div>
 
-<input data-xbind="obj.textList[0].val" id="t0">
-<input data-xbind="obj.textList[1].val" id="t1">
-<input data-xbind="obj.textList[2].val" id="t2">
+<input bind="obj.textList[0].val" id="t0">
+<input bind="obj.textList[1].val" id="t1">
+<input bind="obj.textList[2].val" id="t2">
 
-<input data-xbind="obj.textList[0].val" id="t01">
+<input bind="obj.textList[0].val" id="t01">
 
 <div id="v0">${obj.textList[0].val}</div>
 <div id="v1">${obj.textList[1].val}</div>

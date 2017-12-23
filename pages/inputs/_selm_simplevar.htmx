@@ -9,17 +9,17 @@ select s1 3;
 text val val1,val2,val3;
 </div>
 
-Values: 
-	<select data-xbind="val" id="s1" multiple>
+Values:
+	<select bind="val" id="s1" multiple>
 		<option></option>
 		<option value="val1">val1</option>
 		<option value="val2">val2</option>
 		<option value="val3">val3</option>
 	</select>
 	<br>
-	
-Values: 
-	<select data-xbind="val" id="s2" multiple>
+
+Values:
+	<select bind="val" id="s2" multiple>
 		<option></option>
 		<option value="val1">val1</option>
 		<option value="val2">val2</option>

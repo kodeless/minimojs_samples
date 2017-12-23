@@ -15,8 +15,8 @@ type i1 1;
 text val1 11;
 </div>
 
-main obj.val: <input data-xbind="val" id="i" onkeyup="toggle()"><br>
+main obj.val: <input bind="val" id="i" onkeyup="toggle()"><br>
 main val: <div id="val">${val}</div>
 <div id="divmodal" style="border-style: solid"
-	data-xmodal-modal1="/modal/_modald1" data-xmodal-toggle="modal1" 
+	data-xmodal-modal1="/modal/_modald1" data-xmodal-toggle="modal1"
 	data-xmodal-modal2="/modal/_modald2"></div>

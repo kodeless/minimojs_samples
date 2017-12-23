@@ -13,6 +13,6 @@ text val asdfyyy;
 text valm qwerxxx;
 </div>
 
-main obj.val: <input data-xbind="val" id="i1"><br>
+main obj.val: <input bind="val" id="i1"><br>
 main val: <div id="val">${val}</div>
 <div style="border-style: solid" data-xmodal="/modal/_modalsimple"></div>

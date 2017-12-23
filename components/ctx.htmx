@@ -1,1 +1,1 @@
-<button onclick="this.increaseCount();" id="${this.id}">Count: ${count}</button>
+<button onclick="$comp.increaseCount();" id="${$comp.id}">Count: ${count}</button>

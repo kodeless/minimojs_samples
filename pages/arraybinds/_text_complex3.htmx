@@ -26,18 +26,18 @@ text v6 345;
 text v7 456;
 </div>
 
-<input data-xbind="obj.textList[0][0].val" id="t0">
-<input data-xbind="obj.textList[0][1].val" id="t1">
-<input data-xbind="obj.textList[1][0].val" id="t2">
-<input data-xbind="obj.textList[1][1].val" id="t3">
+<input bind="obj.textList[0][0].val" id="t0">
+<input bind="obj.textList[0][1].val" id="t1">
+<input bind="obj.textList[1][0].val" id="t2">
+<input bind="obj.textList[1][1].val" id="t3">
 <br>
-<input data-xbind="obj.textList2[0][0].val" id="t4">
-<input data-xbind="obj.textList2[0][1].val" id="t5">
-<input data-xbind="obj.textList2[1][0].val" id="t6">
-<input data-xbind="obj.textList2[1][1].val" id="t7">
+<input bind="obj.textList2[0][0].val" id="t4">
+<input bind="obj.textList2[0][1].val" id="t5">
+<input bind="obj.textList2[1][0].val" id="t6">
+<input bind="obj.textList2[1][1].val" id="t7">
 <br>
-<input data-xbind="obj.textList[0][0].val" id="t01">
-<input data-xbind="obj.textList2[0][0].val" id="t02">
+<input bind="obj.textList[0][0].val" id="t01">
+<input bind="obj.textList2[0][0].val" id="t02">
 <br>
 <div id="v0">${obj.textList[0][0].val}</div>
 <div id="v1">${obj.textList[0][1].val}</div>

@@ -14,6 +14,6 @@ waith 1000;
 text val asdfa;
 </div>
 
-main obj.val: <input data-xbind="val" id="i"><br>
+main obj.val: <input bind="val" id="i"><br>
 <button onclick="show()" id="b">Show Alert</button>
 <button onclick="X.showLoading();setTimeout(function(){X.closeLoading();}, 3000);">Loading</button>

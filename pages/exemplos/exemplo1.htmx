@@ -1,14 +1,14 @@
 <h1>Esta pagina tem tag html portanto nao tem template e nao é spa</h1>
 
-Nome: <input data-xbind="pessoa.dados.nome"><br>
-Sexo: <select data-xbind="pessoa.dados.sexo">
+Nome: <input bind="pessoa.dados.nome"><br>
+Sexo: <select bind="pessoa.dados.sexo">
     <option data-xvalue="null"></option>
     $for(sexo in listaSexo){
         <option data-xvalue="sexo">${sexo.nome}</option>
     }
     </select><br>
-<input type="checkbox" data-xbind="pessoa.gostaDeFilmes">Gosta de filmes<br>
-Interesses: <select data-xbind="pessoa.interesses" multiple>
+<input type="checkbox" bind="pessoa.gostaDeFilmes">Gosta de filmes<br>
+Interesses: <select bind="pessoa.interesses" multiple>
     $for(interesse in listaInteresse){
         <option>${interesse}</option>
     }
@@ -19,7 +19,12 @@ $if(pessoa && pessoa.dados && pessoa.dados.nome!='Valle'){
 }
 <br>
 <button onclick="setPessoaNoModal()">Jogar pessoa no modal</button><br>
-<div style="border-style: solid" id="modalDiv"></div>
+<modal path="/exemplos/modal" bindTo="modal" start="true">
+  <div style="border-style: solid">
+    {modal-content}
+  </div>
+</modal>
+
 
 <br>
 <button onclick="adicionarPessoa()">Adicionar pessoa na tabela</button><br>
@@ -30,4 +35,5 @@ $if(pessoa && pessoa.dados && pessoa.dados.nome!='Valle'){
     <column title="Gosta de filmes">item.gostaDeFilmes ? 'Sim' : 'Nao'</column>
 </actiontable>
 
-<a href="{webctx}/exemplos/spa1.html">spa1</a>
+<a href="/exemplos/spa1.html">spa1</a>
+<button onclick="count = count + 1">Add Count ${count}</button>

@@ -21,7 +21,7 @@ text clicked Item311/3;
 </div>
 
 <xiterator list="list" var="item" indexvar="i">
-	<input id="i_${i}" data-xbind="item.val">
+	<input id="i_${i}" bind="item.val">
 	<button id="b_${i}" onclick="click(item, i)" type="checkbox">${item.val}</button>
 	<br>
 </xiterator>

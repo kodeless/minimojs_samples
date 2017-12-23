@@ -13,7 +13,7 @@ text val 2;
 
 </div>
 
-<input data-xtype="autocomplete" data-xac-fn="acFn" data-xac-itemvar="item" id="i" data-xbind="selected"
+<input data-xtype="autocomplete" data-xac-fn="acFn" data-xac-itemvar="item" id="i" bind="selected"
 	data-xac-desc-input-scr="item.name + '...' + item.code" data-xac-desc-scr="item.name">
-	
+
 <div id="val">${selected.code}</div>

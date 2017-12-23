@@ -5,7 +5,7 @@ text d;
 type t how;
 text d Mostrando:Test;
 </div>
-<input id="t" type="text" data-xbind="val"/>
+<input id="t" type="text" bind="val"/>
 <br>
 <div id="d">
 $if(val == "show"){

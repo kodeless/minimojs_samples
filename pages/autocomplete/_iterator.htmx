@@ -17,7 +17,7 @@ text val 2/3//;
 </div>
 
 <div data-xiterator-list="objList" data-xiterator-var="objItem" data-xiterator-indexvar="i">
-	<input id="i_${i}" data-xtype="autocomplete" data-xac-fn="acFn" data-xac-itemvar="item" data-xbind="objItem.val"
+	<input id="i_${i}" data-xtype="autocomplete" data-xac-fn="acFn" data-xac-itemvar="item" bind="objItem.val"
 		data-xac-desc-input-scr="item.name" data-xac-desc-scr="item.name">
 </div>
 

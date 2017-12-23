@@ -29,8 +29,8 @@ text val Item0,true/Item1,false/Item2,true/Item3,false/;
 </div>
 
 <xiterator list="list" var="item" indexvar="i">
-<input id="i_${i}" data-xbind="item.val" onkeyup="kup()">
-<input id="c_${i}" data-xbind="item.bool" onclick="clickCount()" type="checkbox">
+<input id="i_${i}" bind="item.val" onkeyup="kup()">
+<input id="c_${i}" bind="item.bool" onclick="clickCount()" type="checkbox">
 <br>
 </xiterator>
 <br>

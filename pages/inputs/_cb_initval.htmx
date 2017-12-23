@@ -28,9 +28,9 @@ text val2 true;
 text val true;
 </div>
 
-obj.val: <input type="checkbox" data-xbind="obj.val" id="c1"><br>
-obj.val2: <input type="checkbox" data-xbind="obj.val2" id="c2"><br>
-val: <input type="checkbox" data-xbind="val" id="c0"><br>
+obj.val: <input type="checkbox" bind="obj.val" id="c1"><br>
+obj.val2: <input type="checkbox" bind="obj.val2" id="c2"><br>
+val: <input type="checkbox" bind="val" id="c0"><br>
 
 <div id="val1">${obj.val}</div><br>
 <div id="val2">${obj.val2}</div><br>

@@ -12,17 +12,17 @@ value s2;
 text val;
 </div>
 
-Values: 
-	<select data-xbind="obj.val" id="s1">
+Values:
+	<select bind="obj.val" id="s1">
 		<option></option>
 		<option value="val1">val1</option>
 		<option value="val2">val2</option>
 		<option value="val3">val3</option>
 	</select>
 	<br>
-	
-Values: 
-	<select data-xbind="obj.val" id="s2">
+
+Values:
+	<select bind="obj.val" id="s2">
 		<option></option>
 		<option value="val1">val1</option>
 		<option value="val2">val2</option>

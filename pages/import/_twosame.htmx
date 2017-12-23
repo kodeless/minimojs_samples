@@ -24,7 +24,7 @@ text i1val 1234;
 text i2val 1234asdf;
 </div>
 
-<input data-xbind="val" id="i">
+<input bind="val" id="i">
 <button onclick="i1.setVal(val)" id="b1">Set on i</button>
 <button onclick="i2.setVal(val)" id="b2">Set on i</button>
 <br>

@@ -25,7 +25,7 @@ text count 4;
 </div>
 
 <xiterator list="list" var="item" indexvar="i">
-<input id="i_${i}" data-xbind="item" onkeyup="add()"></xiterator>
+<input id="i_${i}" bind="item" onkeyup="add()"></xiterator>
 <br>
 <button id="add" onclick="addItem()">Add</button><br>
 <button id="recreate" onclick="recreate()">Recreate</button><br>

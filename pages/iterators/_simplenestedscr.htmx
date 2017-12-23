@@ -24,7 +24,7 @@ text val 11-a/1111-aa/111111-aaa/22-b/2222-bb/222222-bbb/33-c/3333-cc/333333-ccc
 $for (item in list with i){
 	${i}:${item.code}
 	$for (innerItem in item.list with ii){
-		${ii}:${innerItem.code}<input data-xbind="innerItem.val" id="i_${i}_${ii}">
+		${ii}:${innerItem.code}<input bind="innerItem.val" id="i_${i}_${ii}">
 	}
 	<br>
 }

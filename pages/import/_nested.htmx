@@ -24,7 +24,7 @@ text i1val 1234;
 text i2val 1234xxx;
 </div>
 
-<input data-xbind="val" id="i">
+<input bind="val" id="i">
 <button onclick="i.setVal(val)" id="b1">Set on i</button>
 <button onclick="i.setNestedVal(val)" id="b2">Set on nested i</button>
 <br>

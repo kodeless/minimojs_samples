@@ -1,4 +1,4 @@
-<template-info path="tpl_global.html"/>
+<template-info path="tpl_global.htmx"/>
 <div id="instructions">
     wait 1000;
     eq local global;
@@ -8,8 +8,8 @@
     neq local global;
 </div>
 
-<input data-xbind="globalImport.timer" id="i"/>
+<input bind="globalImport.timer" id="i"/>
 <br>
 Local timer: <div id="local">${globalImport.timer}</div>
 
-<div id="load">Loaded:${X$.isReady()}</div>
+<div id="load">Loaded:${true}</div>

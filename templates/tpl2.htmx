@@ -11,7 +11,7 @@ body {
 </head>
 <body>
 <div id="tpl">tpl2</div>
-{xbody}
+{mcontent}
 <div id="load">Loaded:true</div>
 </body>
 </html>

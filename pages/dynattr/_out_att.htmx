@@ -6,7 +6,7 @@ click cb1;
 text val true,true;
 </div>
 
-<input type="checkbox" id="cb1" data-xbind="val">v1<br>
+<input type="checkbox" id="cb1" bind="val">v1<br>
 <input checked="${!val}" type="checkbox" id="cb2" disabled="${!val}" >v1<br>
 
 <div id="val">

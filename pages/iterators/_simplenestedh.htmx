@@ -24,7 +24,7 @@ text val 11-a/1111-aa/111111-aaa/22-b/2222-bb/222222-bbb/33-c/3333-cc/333333-ccc
 <xiterator list="list" var="item" indexvar="i">
 	${i}:${item.code}
 	<xiterator list="item.list" var="innerItem" indexvar="ii">
-		${ii}:${innerItem.code}<input data-xbind="innerItem.val" id="i_${i}_${ii}">
+		${ii}:${innerItem.code}<input bind="innerItem.val" id="i_${i}_${ii}">
 	</xiterator>
 	<br>
 </xiterator>

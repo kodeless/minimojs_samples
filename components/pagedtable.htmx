@@ -1,13 +1,13 @@
 <table style="border: 1px solid black;" id="${this.id}">
     <thead>
-    $for (column in this.column with i) {
+    $for (column in $comp.column with i) {
         <th>${column.title}</th>
     }
     </thead>
     <tbody>
-        $for (item in this.list with index){
+        $for (item in $comp.list with index){
             <tr>
-            $for (column in this.column with i) {
+            $for (column in $comp.column with i) {
                 <td>${eval(column.content)}</td>
             }
             </tr>
@@ -15,7 +15,7 @@
     </tbody>
 </table>
 <br>
-total:${this.total}
-<button onclick="if(this.page>0)previous();" id="pb">Previous</button>
-${eval(this.pagevar)}
-<button onclick="if(this.page<(total/10)-1)next();" id="nb">Next</button><br>
+total:${$comp.total}
+<button onclick="if($comp.page>0)previous();" id="pb">Previous</button>
+${eval($comp.pagevar)}
+<button onclick="if($comp.page<($comp/10)-1)next();" id="nb">Next</button><br>

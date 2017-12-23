@@ -7,6 +7,6 @@
 		</style>
 	</head>
 	<body>
-		<input data-xbind="color">
+		<input bind="color">
 	</body>
 </html>

@@ -32,30 +32,30 @@ select i12 2;
 text val4 /two/two;
 
 </div>
-array[0].txt: <input data-xbind="array[0].txt" id="i1"><br>
-array[0].bol: <input type="checkbox"data-xbind="array[0].bol" id="i2"><br>
-array[0].sel: <select data-xbind="array[0].sel" id="i3">
+array[0].txt: <input bind="array[0].txt" id="i1"><br>
+array[0].bol: <input type="checkbox"bind="array[0].bol" id="i2"><br>
+array[0].sel: <select bind="array[0].sel" id="i3">
 				<option></option>
 				<option data-xvalue="list[0]">${list[0].desc}</option>
 				<option data-xvalue="list[1]">${list[1].desc}</option>
 			  </select><br>
-array[1].txt: <input data-xbind="array[1].txt" id="i4"><br>
-array[1].bol: <input type="checkbox"data-xbind="array[1].bol" id="i5"><br>
-array[1].sel: <select data-xbind="array[1].sel" id="i6">
+array[1].txt: <input bind="array[1].txt" id="i4"><br>
+array[1].bol: <input type="checkbox"bind="array[1].bol" id="i5"><br>
+array[1].sel: <select bind="array[1].sel" id="i6">
 				<option></option>
 				<option data-xvalue="list[0]">${list[0].desc}</option>
 				<option data-xvalue="list[1]">${list[1].desc}</option>
 			  </select><br>
-array2[0]: <input data-xbind="array2[0]" id="i7"><br>
-array2[1]: <input data-xbind="array2[1]" id="i8"><br>
-array3[0]: <input type="checkbox"data-xbind="array3[0]" id="i9"><br>
-array3[1]: <input type="checkbox"data-xbind="array3[1]" id="i10"><br>
-array4[0].sel: <select data-xbind="array4[0]" id="i11">
+array2[0]: <input bind="array2[0]" id="i7"><br>
+array2[1]: <input bind="array2[1]" id="i8"><br>
+array3[0]: <input type="checkbox"bind="array3[0]" id="i9"><br>
+array3[1]: <input type="checkbox"bind="array3[1]" id="i10"><br>
+array4[0].sel: <select bind="array4[0]" id="i11">
 				<option></option>
 				<option data-xvalue="list[0]">${list[0].desc}</option>
 				<option data-xvalue="list[1]">${list[1].desc}</option>
 			  </select><br>
-array4[1].sel: <select data-xbind="array4[1]" id="i12">
+array4[1].sel: <select bind="array4[1]" id="i12">
 				<option></option>
 				<option data-xvalue="list[0]">${list[0].desc}</option>
 				<option data-xvalue="list[1]">${list[1].desc}</option>

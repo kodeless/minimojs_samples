@@ -32,7 +32,7 @@ text val 11-a/1111-aa/111111-aaa/22-b/2222-bb/222222-bbb/33-c/3333-cc/333333-ccc
 <span data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i" id="val1">
 	${i}:${item.code}
 	<span data-xiterator-list="item.list" data-xiterator-var="innerItem" data-xiterator-indexvar="ii">
-		${ii}:${innerItem.code}<input data-xbind="innerItem.val" id="i_${i}_${ii}" onkeyup="change(innerItem, ii, i)">
+		${ii}:${innerItem.code}<input bind="innerItem.val" id="i_${i}_${ii}" onkeyup="change(innerItem, ii, i)">
 	</span>
 	<br>
 </span>

@@ -23,17 +23,8 @@ text val2 val3;
 text val;
 </div>
 
-Values for obj.val: 
-	<select data-xbind="obj.val" id="s1">
-		<option></option>
-		<option value="val1">val1</option>
-		<option value="val2">val2</option>
-		<option value="val3">val3</option>
-	</select>
-	<br>
-	
-Values for obj.val2: 
-	<select data-xbind="obj.val2" id="s2">
+Values for obj.val:
+	<select bind="obj.val" id="s1">
 		<option></option>
 		<option value="val1">val1</option>
 		<option value="val2">val2</option>
@@ -41,15 +32,24 @@ Values for obj.val2:
 	</select>
 	<br>
 
-Values for val: 
-	<select data-xbind="val" id="s0">
+Values for obj.val2:
+	<select bind="obj.val2" id="s2">
 		<option></option>
 		<option value="val1">val1</option>
 		<option value="val2">val2</option>
 		<option value="val3">val3</option>
 	</select>
 	<br>
-	
+
+Values for val:
+	<select bind="val" id="s0">
+		<option></option>
+		<option value="val1">val1</option>
+		<option value="val2">val2</option>
+		<option value="val3">val3</option>
+	</select>
+	<br>
+
 
 <div id="val1">${obj.val}</div><br>
 <div id="val2">${obj.val2}</div><br>

@@ -10,7 +10,7 @@ text val false;
 attr c2 checked;
 </div>
 
-obj.val: <input type="checkbox" data-xbind="obj.val" id="c1"><br>
-obj.val: <input type="checkbox" data-xbind="obj.val" id="c2"><br>
+obj.val: <input type="checkbox" bind="obj.val" id="c1"><br>
+obj.val: <input type="checkbox" bind="obj.val" id="c2"><br>
 
 <div id="val">${obj.val}</div><br>

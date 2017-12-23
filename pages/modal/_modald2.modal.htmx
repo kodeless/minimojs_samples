@@ -1,4 +1,0 @@
-Modal 2<br>
-modal obj.val: <input data-xbind="val" id="i2"><br>
-
-modal val: <div id="val2">${val}</div>

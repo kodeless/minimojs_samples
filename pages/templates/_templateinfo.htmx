@@ -1,4 +1,4 @@
-<template-info path="tpl2.html"/>
+<template-info path="tpl2.htmx"/>
 <div id="instructions">
 text tpl tpl2;
 </div>

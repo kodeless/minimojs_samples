@@ -11,7 +11,7 @@ text val 1234;
 text ival 1234;
 </div>
 
-<input data-xbind="val" id="i">
+<input bind="val" id="i">
 <button onclick="i.setVal(val)" id="b">Set on i</button>
 <br>
 <div id="val">${val}</div>

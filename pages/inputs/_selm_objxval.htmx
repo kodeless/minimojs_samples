@@ -12,17 +12,17 @@ text code 1,2,3;
 text value Val1,Val2,Val3;
 </div>
 
-Values: 
-	<select data-xbind="obj.val" id="s1" multiple>
+Values:
+	<select bind="obj.val" id="s1" multiple>
 		<option></option>
 		<option data-xvalue="list[0]">val1</option>
 		<option data-xvalue="list[1]">val2</option>
 		<option data-xvalue="list[2]">val3</option>
 	</select>
 	<br>
-	
-Values: 
-	<select data-xbind="obj.val" id="s2" multiple>
+
+Values:
+	<select bind="obj.val" id="s2" multiple>
 		<option></option>
 		<option data-xvalue="list[0]">val1</option>
 		<option data-xvalue="list[1]">val2</option>

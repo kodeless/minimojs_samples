@@ -39,7 +39,7 @@ text val1 12341;
 text val2 12341;
 </div>
 
-main obj.val: <input data-xbind="obj.val" id="i"><br>
+main obj.val: <input bind="obj.val" id="i"><br>
 main val: <div id="val">${obj.val}</div>
 <button onclick="link()" id="link">Link All</button>
 <div id="divmodalnested" style="border-style: solid"></div>

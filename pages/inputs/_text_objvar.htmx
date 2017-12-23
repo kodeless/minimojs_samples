@@ -8,8 +8,8 @@ text val 123234;
 value inputEl 123234;
 </div>
 
-obj.val: <input data-xbind="obj.val" id="inputEl"><br>
-obj.val: <input data-xbind="obj.val" id="inputEl2"><br>
+obj.val: <input bind="obj.val" id="inputEl"><br>
+obj.val: <input bind="obj.val" id="inputEl2"><br>
 <div id="val">
 ${obj.val}
 </div>

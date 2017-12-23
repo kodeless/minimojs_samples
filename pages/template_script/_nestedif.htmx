@@ -11,8 +11,8 @@
     type t w;
     text d Mostrando:Testok;
 </div>
-<input id="t" type="text" data-xbind="val"/>
-<input type="checkbox" id="c" data-xbind="val2"/>
+<input id="t" type="text" bind="val"/>
+<input type="checkbox" id="c" bind="val2"/>
 <br>
 <div id="d">
 $if(val == "show"){
