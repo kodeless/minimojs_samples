@@ -5,10 +5,10 @@
     }
     </thead>
     <tbody>
-    $for (item in $comp.list with index){
+    $for (itemVarName in $comp.list with indexVarName){
         <tr>
             $for (column in $comp.column) {
-                <td>${eval(column.content)}</td>
+                <td>${column.content}</td>
             }
             <td><button onclick="$comp.remove(index)">Remove</button></td>
         </tr>

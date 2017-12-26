@@ -11,14 +11,14 @@ text value Val2;
 </div>
 
 Values:
-	val1 <input type="radio" name="rb1" data-xvalue="list[0]" bind="val" id="r11">
-	val2 <input type="radio" name="rb1" data-xvalue="list[1]" bind="val" id="r12">
-	val3 <input type="radio" name="rb1" data-xvalue="list[2]" bind="val" id="r13"><br>
+	val1 <input type="radio" name="rb1" value="${list[0]}" bind="val" id="r11">
+	val2 <input type="radio" name="rb1" value="${list[1]}" bind="val" id="r12">
+	val3 <input type="radio" name="rb1" value="${list[2]}" bind="val" id="r13"><br>
 
 Values:
-	val3 <input type="radio" name="rb2" data-xvalue="list[2]" bind="val" id="r21">
-	val2 <input type="radio" name="rb2" data-xvalue="list[1]" bind="val" id="r22">
-	val1 <input type="radio" name="rb2" data-xvalue="list[0]" bind="val" id="r23"><br>
+	val3 <input type="radio" name="rb2" value="${list[2]}" bind="val" id="r21">
+	val2 <input type="radio" name="rb2" value="${list[1]}" bind="val" id="r22">
+	val1 <input type="radio" name="rb2" value="${list[0]}" bind="val" id="r23"><br>
 
 <div id="code">${val.code}</div><br>
 <div id="value">${val.value}</div><br>

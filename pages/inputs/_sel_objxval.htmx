@@ -18,18 +18,18 @@ text value Empty;
 Values:
 	<select bind="obj.val" id="s1">
 		<option></option>
-		<option data-xvalue="list[0]">val1</option>
-		<option data-xvalue="list[1]">val2</option>
-		<option data-xvalue="list[2]">val3</option>
+		<option value="${list[0]}">val1</option>
+		<option value="${list[1]}">val2</option>
+		<option value="${list[2]}">val3</option>
 	</select>
 	<br>
 
 Values:
 	<select bind="obj.val" id="s2">
 		<option></option>
-		<option data-xvalue="list[0]">val1</option>
-		<option data-xvalue="list[1]">val2</option>
-		<option data-xvalue="list[2]">val3</option>
+		<option value="${list[0]}">val1</option>
+		<option value="${list[1]}">val2</option>
+		<option value="${list[2]}">val3</option>
 	</select>
 	<br>
 

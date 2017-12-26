@@ -13,7 +13,7 @@
 </div>
 Bool <input bind="obj.bool" type="checkbox" id="i1"><br>
 $for(item in list with i){
-v${i}: <input bind="obj.lista" type="checkbox" id="ii${i}" data-xvalue="item"><br>
+v${i}: <input bind="obj.lista" type="checkbox" id="ii${i}" value="${item}"><br>
 }
 
 <div id="d1">${obj.bool}</div><br>

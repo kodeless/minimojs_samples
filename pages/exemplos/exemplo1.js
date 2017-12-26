@@ -31,3 +31,7 @@ function adicionarPessoa(){
     pessoa = {};
     imported.setVal(pessoa);
 }
+
+function incrementCount(){
+  count++;
+}

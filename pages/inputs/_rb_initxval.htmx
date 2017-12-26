@@ -29,19 +29,19 @@ text val 3;
 </div>
 
 Values for obj.val:
-	val1 <input type="radio" name="rb1" data-xvalue="list[0]" bind="obj.val" id="r11">
-	val2 <input type="radio" name="rb1" data-xvalue="list[1]" bind="obj.val" id="r12">
-	val3 <input type="radio" name="rb1" data-xvalue="list[2]" bind="obj.val" id="r13"><br>
+	val1 <input type="radio" name="rb1" value="${list[0]}" bind="obj.val" id="r11">
+	val2 <input type="radio" name="rb1" value="${list[1]}" bind="obj.val" id="r12">
+	val3 <input type="radio" name="rb1" value="${list[2]}" bind="obj.val" id="r13"><br>
 
 Values for obj.val2:
-	val1 <input type="radio" name="rb2" data-xvalue="list[0]" bind="obj.val2" id="r21">
-	val2 <input type="radio" name="rb2" data-xvalue="list[1]" bind="obj.val2" id="r22">
-	val3 <input type="radio" name="rb2" data-xvalue="list[2]" bind="obj.val2" id="r23"><br>
+	val1 <input type="radio" name="rb2" value="${list[0]}" bind="obj.val2" id="r21">
+	val2 <input type="radio" name="rb2" value="${list[1]}" bind="obj.val2" id="r22">
+	val3 <input type="radio" name="rb2" value="${list[2]}" bind="obj.val2" id="r23"><br>
 
 Values for val:
-	val1 <input type="radio" name="rb3" data-xvalue="list[0]" bind="val" id="r01">
-	val2 <input type="radio" name="rb3" data-xvalue="list[1]" bind="val" id="r02">
-	val3 <input type="radio" name="rb3" data-xvalue="list[2]" bind="val" id="r03"><br>
+	val1 <input type="radio" name="rb3" value="${list[0]}" bind="val" id="r01">
+	val2 <input type="radio" name="rb3" value="${list[1]}" bind="val" id="r02">
+	val3 <input type="radio" name="rb3" value="${list[2]}" bind="val" id="r03"><br>
 
 <div id="val1">${obj.val.code}</div><br>
 <div id="val2">${obj.val2.code}</div><br>

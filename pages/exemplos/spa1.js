@@ -1,1 +1,1 @@
-var valorParametro;
+var parametro;

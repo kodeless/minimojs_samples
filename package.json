@@ -1,0 +1,23 @@
+{
+  "name": "minimojs_samples",
+  "version": "1.0.0",
+  "description": "Samples and seleninum tests for minimo",
+  "main": "selenium.js",
+  "dependencies": {
+    "selenium-webdriver": "^2.44.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kodeless/minimojs_samples.git"
+  },
+  "author": "Eduardo Manrique",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kodeless/minimojs_samples/issues"
+  },
+  "homepage": "https://github.com/kodeless/minimojs_samples#readme"
+}

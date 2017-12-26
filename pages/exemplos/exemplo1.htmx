@@ -2,9 +2,9 @@
 
 Nome: <input bind="pessoa.dados.nome"><br>
 Sexo: <select bind="pessoa.dados.sexo">
-    <option data-xvalue="null"></option>
+    <option value="${null}"></option>
     $for(sexo in listaSexo){
-        <option data-xvalue="sexo">${sexo.nome}</option>
+        <option value="${sexo}">${sexo.nome}</option>
     }
     </select><br>
 <input type="checkbox" bind="pessoa.gostaDeFilmes">Gosta de filmes<br>
@@ -29,11 +29,11 @@ $if(pessoa && pessoa.dados && pessoa.dados.nome!='Valle'){
 <br>
 <button onclick="adicionarPessoa()">Adicionar pessoa na tabela</button><br>
 <actiontable list="pessoaList" id="tb">
-    <column title="">index</column>
-    <column title="Nome">item.dados.nome</column>
-    <column title="Sexo">item.dados.sexo.nome</column>
-    <column title="Gosta de filmes">item.gostaDeFilmes ? 'Sim' : 'Nao'</column>
+    <column title="">(${indexVarName})</column>
+    <column title="Nome"><b>${item.dados.nome}</b></column>
+    <column title="Sexo">${item.dados.sexo.nome}</column>
+    <column title="Gosta de filmes">${item.gostaDeFilmes ? 'Sim' : 'Nao'}</column>
 </actiontable>
 
 <a href="/exemplos/spa1.html">spa1</a>
-<button onclick="count = count + 1">Add Count ${count}</button>
+<button onclick="incrementCount()">Add Count ${count}</button>
