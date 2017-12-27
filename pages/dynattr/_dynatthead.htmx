@@ -5,6 +5,7 @@
 			background-color: ${color};
 		}
 		</style>
+    <title>Tests</title>
 	</head>
 	<body>
 		<input bind="color">

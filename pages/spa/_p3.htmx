@@ -1,4 +1,7 @@
 <html>
+<head>
+  <title>Tests</title>
+</head>
 <body>
 <div id="p3">Page3</div>
 <a href="/spa/_p1">p1</a><br>

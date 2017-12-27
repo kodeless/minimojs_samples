@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>no template</title>
+<title>Tests</title>
 <style id="st1">
 body {background-color:lightgrey;}
 h1   {color:blue;}
@@ -15,7 +15,7 @@ p    {color:green;}
 	</div>
 	<H1>No template page</H1>
 	<p>no template page</p>
-	
+
 	<div id="load">Loaded:true</div>
 </body>
 </html>

@@ -4,7 +4,12 @@
   "description": "Samples and seleninum tests for minimo",
   "main": "selenium.js",
   "dependencies": {
-    "selenium-webdriver": "^2.44.0"
+    "chromedriver": "^2.12.0",
+    "http-server": "^0.10.0",
+    "minimojs": "^1.0.0",
+    "prompt": "^1.0.0",
+    "selenium-webdriver": "^2.44.0",
+    "underscore": "^1.8.3"
   },
   "devDependencies": {},
   "scripts": {
