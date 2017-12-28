@@ -16,7 +16,7 @@ function blurevt() {
 }
 
 function event(name) {
-	var e = X.getEvent();
+	var e = m.event;
 	val.push('type:' + e.type + ',expected:' + name);
 	val.sort();
 	console.log(val.join('/'));

@@ -8,6 +8,8 @@
     <title>Tests</title>
 	</head>
 	<body>
+		<div id="instructions">
+		</div>
 		<input bind="color">
 	</body>
 </html>

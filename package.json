@@ -2,7 +2,7 @@
   "name": "minimojs_samples",
   "version": "1.0.0",
   "description": "Samples and seleninum tests for minimo",
-  "main": "selenium.js",
+  "main": "run_selenium.js",
   "dependencies": {
     "chromedriver": "^2.12.0",
     "http-server": "^0.10.0",

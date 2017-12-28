@@ -17,6 +17,10 @@
 		var instructions = _('instructions');
 		if(instructions){
 			instructions.onclick = function(){
+				if(this._clicked){
+					return;
+				}
+				this._clicked = true;
 				var a = instructions.innerHTML.split(";");
 				instructions.innerHTML = "";
 				var count = 0;

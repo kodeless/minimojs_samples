@@ -1,4 +1,5 @@
 <div id="instructions">
+    wait 500;
     text d1 false;
     click i1;
     text d1 true;
@@ -16,6 +17,6 @@ $for(item in list with i){
 v${i}: <input bind="obj.lista" type="checkbox" id="ii${i}" value="${item}"><br>
 }
 
-<div id="d1">${obj.bool}</div><br>
-<div id="d2">${obj.lista}</div>
-<div id="d3">${JSON.stringify(obj)}</div>
+d1:<div id="d1">${obj.bool}</div>
+d2:<div id="d2">${obj.lista}</div>
+d3:<div id="d3">${JSON.stringify(obj)}</div>
