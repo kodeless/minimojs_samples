@@ -10,7 +10,7 @@
             "name": "Launch Program",
             "program": "${workspaceFolder}/run_selenium.js",
             "args": [
-                "3"
+                "7"
             ]
         }
     ]

@@ -8,8 +8,8 @@
     neq local global;
 </div>
 
-<input bind="globalImport.timer" id="i"/>
+<input bind="timerValue" onchange="changeTimerValue()" id="i"/>
 <br>
-Local timer: <div id="local">${globalImport.timer}</div>
+Local timer: <div id="local">${globalImport.getTimer()}</div>
 
 <div id="load">Loaded:${true}</div>

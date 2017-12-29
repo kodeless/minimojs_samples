@@ -4,6 +4,6 @@
 </head>
 <body>
 	{mcontent}
-	Global timer: <div id="global">${globalImport.timer}</div>
+	Global timer: <div id="global">${globalImport.getTimer()}</div>
 </body>
 </html>

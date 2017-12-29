@@ -36,13 +36,9 @@ const closeResources = () => {
   }
 }
 
-const getElements = (idOrName) => {
-  let el = driver.findElement(selenium.By.id(idOrName));
-  if (!el) {
-    el = driver.findElement(selenium.By.className(idOrName));
-  }
-  return el;
-}
+const getElements = (idOrName) =>
+  driver.findElement(selenium.By.id(idOrName))
+  .catch(() => driver.findElement(selenium.By.className(idOrName)));
 
 const execInstruction = ({
   command,
@@ -55,109 +51,111 @@ const execInstruction = ({
   if (command == "wait") {
     setTimeout(resolve, parseInt(firstParam));
   } else if (command == "type") {
-    let el = getElements(elementId);
-    el.sendKeys(paramList[0]);
-    setTimeout(resolve, 500);
+    getElements(elementId).then(el => {
+        el.sendKeys(paramList[0]);
+        setTimeout(resolve, 500);
+      })
+      .catch(e => reject(e));
   } else if (command == "text") {
-    let el = getElements(elementId);
-    el.getText().then(text => {
-      if (text.replace(" ", "") != paramList[0]) {
-        reject({
-          step: step,
-          message: `InnerText of element ${elementId} = '${text}' and should be '${paramList[0]}'`
-        });
-      } else {
-        resolve();
-      }
-    });
+    getElements(elementId).then(el => {
+        el.getText().then(text => {
+            if (text.replace(" ", "") != paramList[0]) {
+              reject({
+                step: step,
+                message: `InnerText of element ${elementId} = '${text}' and should be '${paramList[0]}'`
+              });
+            } else {
+              resolve();
+            }
+          })
+          .catch(e => reject(e));
+      })
+      .catch(e => reject(e));
   } else if (command == "value") {
-    let el = getElements(elementId);
-    el.getAttribute("value").then(value => {
-      let paramValue = paramList[0];
-      if (paramValue && paramValue != value) {
-        reject({
-          step: step,
-          message: `Value of element ${elementId} = '${value}' and should be '${paramValue}'`
-        });
-      } else {
-        resolve();
-      }
-    });
+    getElements(elementId).then(el => {
+        el.getAttribute("value").then(value => {
+            let paramValue = paramList[0];
+            if (paramValue && paramValue != value) {
+              reject({
+                step: step,
+                message: `Value of element ${elementId} = '${value}' and should be '${paramValue}'`
+              });
+            } else {
+              resolve();
+            }
+          })
+          .catch(e => reject(e));
+      })
+      .catch(e => reject(e));
   } else if (command == "notfound") {
-    let found = true;
-    try {
-      driver.findElement(selenium.By.id(elementId));
-    } catch (e) {
-      found = false;
-    }
-    if (found) {
-      reject({
+    driver.findElement(selenium.By.id(elementId))
+      .then(() => reject({
         step: step,
         message: `Should be notfound ${elementId}`
-      });
-    } else {
-      resolve();
-    }
+      }))
+      .catch(e => resolve());
   } else if (command == "found") {
-    let found = true;
-    try {
-      driver.findElement(selenium.By.id(elementId));
-    } catch (e) {
-      found = false;
-    }
-    if (!found) {
-      reject({
+    driver.findElement(selenium.By.id(elementId))
+      .then(() => resolve())
+      .catch(e => reject({
         step: step,
         message: `Should be found ${elementId}`
-      });
-    } else {
-      resolve();
-    }
+      }));
   } else if (command == "click") {
     setTimeout(() => {
-      let el = getElements(elementId);
-      el.click();
-      setTimeout(resolve, 500);
+      getElements(elementId).then(el => {
+          el.click();
+          setTimeout(resolve, 500);
+        })
+        .catch(e => reject(e));
     }, 300);
   } else if (command == "select") {
-    let el = getElements(elementId);
-    driver.executeScript(`
+    getElements(elementId).then(el => {
+        driver.executeScript(`
       document.getElementById('${elementId}').options[${paramList[0]}].selected = 'selected';
       document.getElementById('${elementId}').dispatchEvent(new Event('change'))
       `)
-      .then(() => {
-        setTimeout(resolve, 500);
-      });
+          .then(() => setTimeout(resolve, 500))
+          .catch(e => reject(e));
+      })
+      .catch(e => reject(e));
   } else if (command == "attr") {
-    let el = getElements(elementId);
-    el.getAttribute(paramList[0]).then(attr => {
-      let value = paramList.length > 1 ? paramList[1] : "";
-      if (value != attr) {
-        reject({
-          step: step,
-          message: `Attribute ${paramList[0]} of element ${elementId} is '${attr}' but should be '${value}'`
-        });
-      } else {
-        resolve();
-      }
-    });
+    getElements(elementId).then(el => {
+        el.getAttribute(paramList[0]).then(attr => {
+            let value = paramList.length > 1 ? paramList[1] : "";
+            if (value != attr) {
+              reject({
+                step: step,
+                message: `Attribute ${paramList[0]} of element ${elementId} is '${attr}' but should be '${value}'`
+              });
+            } else {
+              resolve();
+            }
+          })
+          .catch(e => reject(e));
+      })
+      .catch(e => reject(e));
   } else if (command == "del") {
-    let el = getElements(elementId);
-    _.range(parseInt(paramList[0])).forEach(() => el.sendKeys(selenium.Keys.BACK_SPACE));
-    setTimeout(resolve, 500);
+    getElements(elementId).then(el => {
+        _.range(parseInt(paramList[0])).forEach(() => el.sendKeys(selenium.Key.BACK_SPACE));
+        setTimeout(resolve, 500);
+      })
+      .catch(e => reject(e));
   } else if (command == "down") {
-    let el = getElements(elementId);
-    _.range(parseInt(paramList[0])).forEach(() => el.sendKeys(selenium.Keys.ARROW_DOWN));
-    setTimeout(resolve, 500);
+    getElements(elementId).then(el => {
+        _.range(parseInt(paramList[0])).forEach(() => el.sendKeys(selenium.Key.ARROW_DOWN));
+        setTimeout(resolve, 500);
+      })
+      .catch(e => reject(e));
   } else if (command == "enter") {
-    let el = getElements(elementId);
-    el.sendKeys(Keys.ENTER);
-    setTimeout(resolve, 500);
+    getElements(elementId).then(el => {
+        el.sendKeys(selenium.Key.ENTER);
+        setTimeout(resolve, 500);
+      })
+      .catch(e => reject(e));
   } else if (command == "eq") {
-    let el = getElements(elementId);
-    let el2 = getElements(paramList[0]);
-    Promise.all([el.getText(), el2.getText()])
-      .then(text1, text2 => {
+    Promise.all([getElements(elementId).then(e => e.getText()), getElements(paramList[0]).then(e => e.getText())])
+      .then(([text1, text2]) => {
         if (text1.replace(" ", "") != text2.replace(" ", "")) {
           reject({
             step: step,
@@ -166,12 +164,11 @@ const execInstruction = ({
         } else {
           resolve();
         }
-      });
+      })
+      .catch(e => reject(e));
   } else if (command == "neq") {
-    let el = getElements(elementId);
-    let el2 = getElements(paramList[0]);
-    Promise.all([el.getText(), el2.getText()])
-      .then(text1, text2 => {
+    Promise.all([getElements(elementId).then(e => e.getText()), getElements(paramList[0]).then(e => e.getText())])
+      .then(([text1, text2]) => {
         if (text1.replace(" ", "") == text2.replace(" ", "")) {
           reject({
             step: step,
@@ -180,7 +177,8 @@ const execInstruction = ({
         } else {
           resolve();
         }
-      });
+      })
+      .catch(e => reject(e));
   }
 });
 
@@ -204,6 +202,8 @@ const parseInstructions = (text) => text.trim().split(";")
 
 const buffer = new function () {
   let errorCount = 0;
+  let testCount = 0;
+  let notConfiguredCount = 0;
   let groups = [];
   this.newTestGroup = (groupName) => new function () {
     groups.push(this);
@@ -212,6 +212,7 @@ const buffer = new function () {
     this.getTests = () => tests;
     this.getName = () => groupName;
     this.newTest = (testName) => new function () {
+      testCount++;
       tests.push(this);
       this.getName = () => testName;
       this.getGroupName = () => groupName;
@@ -224,27 +225,32 @@ const buffer = new function () {
         }
         errorCount++;
       }
-      this.notConfigured = () => this._notConfigured = true;
+      this.notConfigured = () => {
+        if (!this._notConfigured) {
+          notConfiguredCount++;
+          this._notConfigured = true;
+        }
+      }
     }
   }
 
   this.print = () => {
     console.log(`
 ==========================================================
-${errorCount == 0 ? 'Tests succeded' : `Error count: ${errorCount}`}
+Number of tests: ${testCount}, success ${testCount - errorCount - notConfiguredCount} , not configured ${notConfiguredCount}, error: ${errorCount}
 ${groups.map(group => `
 Group name: ${group.getName()}
 ${group.getTests().map(test => `
-----------------------------------------------------------
--${test.getName()}: ${test._error ? 'Erro' : 'Sucess'}
-${test._error ? `
+${test._error ? 
+`----------------------------------------------------------
+-${test.getName()}: 
   Error on step: ${test._error.step}
   Error message: ${test._error.message}
 ` : ''}
 `).join('\n')}
 `).join('\n')}
 ==========================================================
-      `)
+    `)
   };
 }
 
@@ -260,37 +266,39 @@ const runTestGroup = (testGroup, list) => new Promise(resolve => {
         resolve();
         return;
       }
+      const onNotFoundInstructions = e => {
+        console.log(`Test is not configured ${e.message}`);
+        test.notConfigured();
+        resolve();
+      };
       driver.wait(() => driver.isElementPresent(selenium.By.id("instructions")), 1000)
-        .catch(e => {
-          console.log(`Test is not configured ${e.message}`);
-          test.notConfigured();
-          resolve();
-        })
+        .catch(onNotFoundInstructions)
         .then(() => {
           console.log("getting instructions");
           driver.findElement(selenium.By.id("instructions")).getText().then(t => {
-            driver.executeScript(`document.getElementById('instructions').remove();`)
-              .then(() => {
-                let step = 0;
-                const instructions = parseInstructions(t);
-                console.log(`Running ${instructions.length} intructions`);
-                const exec = (list) => {
-                  if (_.isEmpty(list)) {
-                    resolve();
-                  } else {
-                    execInstruction(_.first(list), step++)
-                      .then(() => {
-                        exec(_.rest(list));
-                      })
-                      .catch((e) => {
-                        test.error(e);
-                        resolve();
-                      });
+              driver.executeScript(`document.getElementById('instructions').remove();`)
+                .then(() => {
+                  let step = 0;
+                  const instructions = parseInstructions(t);
+                  console.log(`Running ${instructions.length} intructions`);
+                  const exec = (list) => {
+                    if (_.isEmpty(list)) {
+                      resolve();
+                    } else {
+                      execInstruction(_.first(list), step++)
+                        .then(() => {
+                          exec(_.rest(list));
+                        })
+                        .catch((e) => {
+                          test.error(e);
+                          resolve();
+                        });
+                    }
                   }
-                }
-                exec(instructions);
-              });
-          });
+                  exec(instructions);
+                });
+            })
+            .catch(onNotFoundInstructions);
         })
     })
     .then(() => {
@@ -311,7 +319,7 @@ const execTests = ([testGroupName, testList], remainingTests) => new Promise((re
 
 const getTests = () => {
   const result = {};
-  fs.readdirSync(`./pages`).map(testName => {
+  fs.readdirSync(`./pages`).filter(testName => !testName.startsWith('_')).map(testName => {
     let curPath = `${__dirname}/pages/${testName}`;
     if (fs.lstatSync(curPath).isDirectory()) {
       result[testName] = fs.readdirSync(curPath)
