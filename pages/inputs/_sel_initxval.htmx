@@ -1,27 +1,27 @@
 <div id="instructions">
-value s1 val1;
-value s2 val3;
-value s0 val2;
+value s1 list[0];
+value s2 list[2];
+value s0 list[1];
 
 select s1 3;
-value s1 val3;
-value s2 val3;
-value s0 val2;
+value s1 list[2];
+value s2 list[2];
+value s0 list[1];
 text val1 3;
 text val2 Val3;
 text val 2;
 
 select s2 2;
-value s1 val3;
-value s2 val2;
-value s0 val2;
+value s1 list[2];
+value s2 list[1];
+value s0 list[1];
 text val1 3;
 text val2 Val2;
 text val 2;
 
 select s0 0;
-value s1 val3;
-value s2 val2;
+value s1 list[2];
+value s2 list[1];
 value s0;
 text val1 3;
 text val2 Val2;

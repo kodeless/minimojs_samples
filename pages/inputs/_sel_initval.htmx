@@ -1,4 +1,5 @@
 <div id="instructions">
+wait 200;
 value s1 val1; value s2 val2; value s0 val3;
 
 select s1 2;

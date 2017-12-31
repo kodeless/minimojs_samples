@@ -20,20 +20,20 @@ type i_3 11;
 text clicked Item311/3;
 </div>
 
-<xiterator list="list" var="item" indexvar="i">
+$for(item in list with i){
 	<input id="i_${i}" bind="item.val">
 	<button id="b_${i}" onclick="click(item, i)" type="checkbox">${item.val}</button>
 	<br>
-</xiterator>
+}
 <br>
 <button id="add" onclick="add()">Add</button><br>
 <button id="recreate" onclick="recreate()">Recreate</button><br>
-<xiterator list="list" var="item" indexvar="i">
+$for(item in list with i){
 	<button onclick="remove(${i})" id="remove_${i}">Remove ${item.val}</button>
-</xiterator>
+}
 <div id="val">
-<xiterator list="list" var="item">
+$for(item in list){
 	${item.val},${item.bool}/
-</xiterator>
+}
 </div>
 <div id="clicked">${clicked.obj.val}/${clicked.index}</div>

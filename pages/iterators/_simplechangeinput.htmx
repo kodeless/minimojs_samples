@@ -24,16 +24,23 @@ text val 0:Item0,1:Item1,2:Item2,3:Item3,;
 text count 4;
 </div>
 
-<div data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i">
-<input id="i_${i}" bind="item" onkeyup="add()"></div>
+<div>
+$for(item in list with i){
+<input id="i_${i}" bind="list[i]" onkeyup="add()">
+}
+</div>
 <br>
 <button id="add" onclick="addItem()">Add</button><br>
 <button id="recreate" onclick="recreate()">Recreate</button><br>
-<div data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i">
+<div>
+$for(item in list with i){
 <button onclick="remove(${i})" id="remove_${i}">Remove ${item}</button>
+}
 </div>
 
-<div data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i" id="val">
+<div id="val">
+$for(item in list with i){
 ${i}:${item},
+}
 </div>
 <div id="count">${count}</div>

@@ -21,18 +21,18 @@ text val 11-a/1111-aa/111111-aaa/22-b/2222-bb/222222-bbb/33-c/3333-cc/333333-ccc
 </div>
 
 <span id="val1">
-<xiterator list="list" var="item" indexvar="i">
+$for(item in list with i){
 	${i}:${item.code}
-	<xiterator list="item.list" var="innerItem" indexvar="ii">
+	$for(innerItem in item.list with ii){
 		${ii}:${innerItem.code}<input bind="innerItem.val" id="i_${i}_${ii}">
-	</xiterator>
+	}
 	<br>
-</xiterator>
+}
 </span>
 <div id="val">
-<xiterator list="list" var="item">
-<xiterator list="item.list" var="innerItem">
+$for(item in list){
+$for(innerItem in item.list){
 ${innerItem.val}-${innerItem.code}/
-</xiterator>
-</xiterator>
+}
+}
 </div>

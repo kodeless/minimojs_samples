@@ -1,26 +1,27 @@
 <div id="instructions">
+wait 200;
 attr c1 checked true;
-attr c2 checked;
-attr c0 checked false;
+attr c2 checked ;
+attr c0 checked ;
 
 click c1;
-attr c1 checked false;
-attr c2 checked false;
-attr c0 checked false;
+attr c1 checked ;
+attr c2 checked ;
+attr c0 checked ;
 text val1 false;
 text val2 false;
 text val false;
 
 click c2;
-attr c1 checked false;
+attr c1 checked ;
 attr c2 checked true;
-attr c0 checked false;
+attr c0 checked ;
 text val1 false;
 text val2 true;
 text val false;
 
 click c0;
-attr c1 checked false;
+attr c1 checked ;
 attr c2 checked true;
 attr c0 checked true;
 text val1 false;

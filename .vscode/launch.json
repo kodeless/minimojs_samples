@@ -7,10 +7,10 @@
         {
             "type": "node",
             "request": "launch",
-            "name": "Launch Program",
+            "name": "run_selenium",
             "program": "${workspaceFolder}/run_selenium.js",
             "args": [
-                "7"
+                "10"
             ]
         }
     ]

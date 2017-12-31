@@ -1,5 +1,0 @@
-<div id="instructions">
-text val 0,1,2,3,4,5,6,7,8,9,;
-</div>
-
-<span data-xiterator-count="10" data-xiterator-indexvar="i" id="val">${i},</span>

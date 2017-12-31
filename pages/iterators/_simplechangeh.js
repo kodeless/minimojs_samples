@@ -13,6 +13,7 @@ function add(){
 }
 
 function remove(i){
-	console.log(i)
-	 list.splice(i, 1);
+	console.log(`Index to remove: ${i}, list size: ${list.length}`);
+	list.splice(i, 1);
+	console.log(`Removed: ${list.length}`);
 }

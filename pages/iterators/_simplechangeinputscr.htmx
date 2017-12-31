@@ -25,7 +25,7 @@ text count 4;
 </div>
 
 $for (item in list with i){
-<input id="i_${i}" bind="item" onkeyup="add()">
+<input id="i_${i}" bind="list[i]" onkeyup="add()">
 }
 <br>
 <button id="add" onclick="addItem()">Add</button><br>

@@ -6,10 +6,12 @@ attr tr_3 color white;
 </div>
 
 <span id="val0">${item}</span><br>
-<table data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i" id="val1">
+<table id="val1">
+	$for(item in list with i){
 	<tr style="background-color:${i%2==0?'blue':'white'};" color="${i%2==0?'blue':'white'}" id="tr_${i}">
 		<td>${i || ""}</td>
 		<td>${item || ''}</td>
 	</tr>
+	}
 </table>
 

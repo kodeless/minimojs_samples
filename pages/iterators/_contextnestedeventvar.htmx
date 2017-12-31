@@ -29,17 +29,26 @@ text changed 333333/2/2/(i)/(ii);
 text val 11-a/1111-aa/111111-aaa/22-b/2222-bb/222222-bbb/33-c/3333-cc/333333-ccc/
 </div>
 
-<span data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i" id="val1">
+$for(item in list with i){
+<span id="val1">
 	${i}:${item.code}
-	<span data-xiterator-list="item.list" data-xiterator-var="innerItem" data-xiterator-indexvar="ii">
+	$for(innerItem in item.list with ii){
+	<span>
 		${ii}:${innerItem.code}<input bind="innerItem.val" id="i_${i}_${ii}" onkeyup="change(innerItem, ii, i)">
 	</span>
+	}
 	<br>
 </span>
-<div id="val" data-xiterator-list="list" data-xiterator-var="item">
-<span data-xiterator-list="item.list" data-xiterator-var="innerItem">
+}
+
+<div id="val">
+$for(item in list){
+	$for(innerItem in item.list){
+<span>
 ${innerItem.val}-${innerItem.code}/
 </span>
+	}
+}
 </div>
 
 <div id="changed">${obj.val}/${index}/${parentIndex}/${i}/${ii}</div>

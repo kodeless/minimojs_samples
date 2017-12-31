@@ -17,10 +17,16 @@ click recreate;
 text val 0:Item0,1:Item1,2:Item2,3:Item3,;
 </div>
 
-<span data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i" id="val">${i}:${item},</span>
+<span id="val">
+$for(item in list with i){
+${i}:${item},
+}
+</span>
 <br>
 <button id="add" onclick="add()">Add</button><br>
 <button id="recreate" onclick="recreate()">Recreate</button><br>
-<div data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i">
+<div>
+$for(item in list with i){
 <button onclick="remove(${i})" id="remove_${i}">Remove ${item}</button>
+}
 </div>

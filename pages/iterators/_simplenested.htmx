@@ -20,15 +20,23 @@ type i_2_2 333;
 text val 11-a/1111-aa/111111-aaa/22-b/2222-bb/222222-bbb/33-c/3333-cc/333333-ccc/
 </div>
 
-<span data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i" id="val1">
+<span id="val1">
+$for(item in list with i){
 	${i}:${item.code}
-	<span data-xiterator-list="item.list" data-xiterator-var="innerItem" data-xiterator-indexvar="ii">
+	<span>
+	$for(innerItem in item.list with ii){
 		${ii}:${innerItem.code}<input bind="innerItem.val" id="i_${i}_${ii}">
+	}
 	</span>
 	<br>
+}
 </span>
-<div id="val" data-xiterator-list="list" data-xiterator-var="item">
-<span data-xiterator-list="item.list" data-xiterator-var="innerItem">
+<div id="val">
+$for(item in list){
+<span>
+$for(innerItem in item.list){
 ${innerItem.val}-${innerItem.code}/
+}
 </span>
+}
 </div>

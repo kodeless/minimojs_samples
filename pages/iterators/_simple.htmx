@@ -4,4 +4,8 @@ text val1 0:Item0,1:Item1,2:Item2,3:Item3,;
 </div>
 
 <span id="val0">${item}</span><br>
-<span data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i" id="val1">${i}:${item},</span>
+<span id="val1">
+$for(item in list with i){
+${i}:${item},
+}
+</span>

@@ -1,11 +1,11 @@
 <div id="instructions">
 select s1 1;
-value s2 val1;
+value s2 list[0];
 text code 1;
 text value Val1;
 
 select s2 2;
-value s1 val2;
+value s1 list[1];
 text code 2;
 text value Val2;
 

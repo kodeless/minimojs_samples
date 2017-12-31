@@ -28,19 +28,22 @@ text val Item0,true/Item1,false/Item2,true/Item3,false/;
 
 </div>
 
-<xiterator list="list" var="item" indexvar="i">
+$for(item in list with i){
 <input id="i_${i}" bind="item.val" onkeyup="kup()">
 <input id="c_${i}" bind="item.bool" onclick="clickCount()" type="checkbox">
 <br>
-</xiterator>
+}
 <br>
 <button id="add" onclick="add()">Add</button><br>
 <button id="recreate" onclick="recreate()">Recreate</button><br>
-<div data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i">
+<div>
+$for(item in list with i){
 <button onclick="remove(${i})" id="remove_${i}">Remove ${item.val}</button>
+}
 </div>
-<div id="val"><xiterator list="list" var="item">
+<div id="val">
+$for(item in list){
 ${item.val},${item.bool}/
-</xiterator>
+}
 </div>
 <div id="count">${count}</div>
