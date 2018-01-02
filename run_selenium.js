@@ -245,9 +245,9 @@ const buffer = new function () {
     console.log('==========================================================');
     console.log(`Number of tests: ${testCount}, success ${testCount - errorCount - notConfiguredCount} , not configured ${notConfiguredCount}, error: ${errorCount}`);
     groups.forEach(group => {
-      if(!group.hasErrors()){
+      if (!group.hasErrors()) {
         console.log(`Group name: ${group.getName()} executed succesfully`);
-      }else{
+      } else {
         console.log(`Group name: ${group.getName()}, errors: ${group.getErrorCount()}`);
         group.getTests().filter(test => test._error).forEach(test => {
           console.log(`-${test.getName()}:`);
@@ -281,12 +281,13 @@ const runTestGroup = (testGroup, list) => new Promise(resolve => {
       };
       driver.wait(() => driver.isElementPresent(selenium.By.id("instructions")), 1000)
         .catch(() => {})
+        .then(() => driver.executeScript(`window._updateDelay=1`))
         .then(() => {
           // console.log("getting instructions");
           driver.findElement(selenium.By.id("instructions")).getText().then(t => {
               driver.executeScript(`document.getElementById('instructions').remove();`)
                 .then(() => {
-                  let step = 0;
+                  let step = 1;
                   const instructions = parseInstructions(t);
                   // console.log(`Running ${instructions.length} intructions`);
                   const _exec = (list) => {

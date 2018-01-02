@@ -15,4 +15,7 @@ text valm qwerxxx;
 
 main obj.val: <input bind="val" id="i1"><br>
 main val: <div id="val">${val}</div>
-<div style="border-style: solid" id="divmodal" data-xmodal-modal="/modal/_modalsimple"></div>
+
+<modal path="/modal/_modalsimple" visible="true">
+<div style="border-style: solid" id="divmodal">{modal-content}</div>
+</modal>

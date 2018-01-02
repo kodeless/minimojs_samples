@@ -42,4 +42,7 @@ text val2 12341;
 main obj.val: <input bind="obj.val" id="i"><br>
 main val: <div id="val">${obj.val}</div>
 <button onclick="link()" id="link">Link All</button>
+
+<modal path="/modal/_simplenested" bindTo="modal" visible="true">
 <div id="divmodalnested" style="border-style: solid"></div>
+</modal>

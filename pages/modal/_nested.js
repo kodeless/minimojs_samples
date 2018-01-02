@@ -1,4 +1,3 @@
-//modal:/modal/_simplenested,divmodalnested,toggle
 var modal;
 
 var obj = {};

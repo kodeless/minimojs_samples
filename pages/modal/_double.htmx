@@ -17,4 +17,9 @@ text val1 11;
 
 main obj.val: <input bind="val" id="i" onkeyup="toggle()"><br>
 main val: <div id="val">${val}</div>
-<div id="divmodal" style="border-style: solid"></div>
+<modal path="/modal/_modald1" bindTo="modal1" visible="true">
+<div id="divmodal" style="border-style: solid">{modal-content}</div>
+</modal>
+<modal path="/modal/_modald2" bindTo="modal2" visible="false">
+<div id="divmodal" style="border-style: solid">{modal-content}</div>
+</modal>

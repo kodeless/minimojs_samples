@@ -1,4 +1,3 @@
-//modal:/modal/_modaliterator,divmodal,toggle
 var modal;
 
 var list = [1,2,3];

@@ -1,4 +1,7 @@
 Simple nested<br>
 main obj.val: <input bind="obj.val" id="i1"><br>
 main val: <div id="val1">${obj.val}</div>
-<div id="divmodal" style="border-style: solid"></div>
+
+<modal path="/modal/_simplenested2" bindTo="modal" visible="true">
+<div id="divmodal" style="border-style: solid">{modal-content}</div>
+</modal>

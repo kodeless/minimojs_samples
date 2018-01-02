@@ -15,4 +15,8 @@ text valm qwerxxx;
 
 main obj.val: <text bind="val" id="i1"><br>
 main val: <div id="val">${val}</div>
-<div id="divmodal" style="border-style: solid"></div>
+<modal path="/modal/_modalcomp" bindTo="modal" visible="true">
+<div id="divmodal" style="border-style: solid">
+    {modal-content}
+</div>
+</modal>

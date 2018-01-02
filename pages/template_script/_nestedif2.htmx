@@ -10,9 +10,9 @@
     click c1;
     click c2;
     type t w;
-    text d Mostrando:Test ok3;
+    text d Mostrando:Testok3;
     click c1;
-    text d Mostrando:Test ok2 ok3;
+    text d Mostrando:Testok2ok3;
 </div>
 <input id="t" type="text" bind="val"/>
 <input type="checkbox" id="c1" bind="val2"/>
