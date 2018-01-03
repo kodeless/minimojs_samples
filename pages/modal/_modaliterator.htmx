@@ -1,1 +1,3 @@
-<div id="valm" style="border-style: solid" data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i">${i}:${item}/</div>
+$for(item in list with i){
+<div id="valm" style="border-style: solid">${i}:${item}/</div>
+}

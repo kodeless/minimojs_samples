@@ -4,6 +4,6 @@ var modal2;
 var val;
 
 function onInit(){
-	modal1._('i').setAttribute("id", 'i1');
-	modal2._('i').setAttribute("id", 'i2');
+	modal1._minimo._dom.getElementById("i").value.setAttribute("id", 'i1');
+	modal2._minimo._dom.getElementById("i").value.setAttribute("id", 'i2');
 }

@@ -1,1 +1,1 @@
-<input type="text" bind="$comp.bind" id="${$comp.id}">
+<input type="text" bind="bind" id="${$comp.id}">
