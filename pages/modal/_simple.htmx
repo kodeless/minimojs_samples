@@ -17,5 +17,5 @@ main obj.val: <input bind="val" id="i1"><br>
 main val: <div id="val">${val}</div>
 
 <modal path="/modal/_modalsimple" bindTo="modal" visible="true">
-<div id="divmodal" style="border-style: solid">{modal:content}</div>
+<div id="divmodal" style="border-style: solid">{modal-content}</div>
 </modal>

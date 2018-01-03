@@ -1,4 +1,4 @@
 Modal EQ<br>
-modal obj.val: <input bind="val" id="i"><br>
+modal obj.val: <input bind="val" class="i"><br>
 
-modal val: <div id="valeq">${val}</div>
+modal val: <div class="v">${val}</div>

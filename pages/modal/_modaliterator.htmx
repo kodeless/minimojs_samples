@@ -1,3 +1,5 @@
+<div id="valm" style="border-style: solid">
 $for(item in list with i){
-<div id="valm" style="border-style: solid">${i}:${item}/</div>
+${i}:${item}/
 }
+</div>

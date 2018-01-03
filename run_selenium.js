@@ -5,6 +5,7 @@ const httpServer = require('http-server/lib/http-server');
 const _ = require('underscore');
 const prompt = require('prompt');
 
+let slow = false;
 let driver;
 const destFolder = `${__dirname}/tmp`;
 
@@ -185,8 +186,9 @@ const execInstruction = ({
   }
 });
 
-const parseInstructions = (text) => `wait 200;${text.trim()}`.split(";")
+const parseInstructions = (text) => _.flatten(`wait 200;${text.trim()}`.split(";")
   .filter(line => line.trim() != "")
+  .map(line => slow ? ['wait 200', line] : line))
   .map(line => {
     const split = line.trim().split(" ");
     const i = {
@@ -425,6 +427,11 @@ const run = (param) => {
 }
 
 if (process.argv.length > 2) {
+  if(process.argv.length > 3){
+    if(process.argv[3] == 'slow'){
+      slow = true;
+    }
+  }
   run(process.argv[2]);
 } else {
   prompt.start();
