@@ -1,3 +1,0 @@
-<xiterator count="10" indexvar="i">
-  <ctx click="alert(1)" id="b${i}"/>
-</xiterator>

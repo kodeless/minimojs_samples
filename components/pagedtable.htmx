@@ -1,4 +1,4 @@
-<table style="border: 1px solid black;" id="${this.id}">
+<table style="border: 1px solid black;" id="${$comp.id}">
     <thead>
     $for (column in $comp.column with i) {
         <th>${column.title}</th>
@@ -8,7 +8,7 @@
         $for (item in $comp.list with index){
             <tr>
             $for (column in $comp.column with i) {
-                <td>${eval(column.content)}</td>
+                <td>${column.content}</td>
             }
             </tr>
         }
@@ -16,6 +16,3 @@
 </table>
 <br>
 total:${$comp.total}
-<button onclick="if($comp.page>0)previous();" id="pb">Previous</button>
-${eval($comp.pagevar)}
-<button onclick="if($comp.page<($comp/10)-1)next();" id="nb">Next</button><br>

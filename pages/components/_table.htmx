@@ -1,23 +1,9 @@
 <div id="instructions">
-wait 2000;
-
-text val CodeName(0)Name_0(1)Name_1(2)Name_2(3)Name_3(4)Name_4(5)Name_5(6)Name_6(7)Name_7(8)Name_8(9)Name_9;
-click pb;
-wait 2000;
-
-text val CodeName(0)Name_0(1)Name_1(2)Name_2(3)Name_3(4)Name_4(5)Name_5(6)Name_6(7)Name_7(8)Name_8(9)Name_9;
-click nb;
-wait 2000;
-
-text val CodeName(10)Name_10(11)Name_11(12)Name_12(13)Name_13(14)Name_14(15)Name_15(16)Name_16(17)Name_17(18)Name_18(19)Name_19;
-click pb;
-wait 2000;
-text val CodeName(0)Name_0(1)Name_1(2)Name_2(3)Name_3(4)Name_4(5)Name_5(6)Name_6(7)Name_7(8)Name_8(9)Name_9;
 </div>
 
 <pagedtable list="list" total="total" page="page" id="table">
-	<column title="Code">prepareCode(item)</column>
-	<column title="Name">item.name || ""</column>
+	<column title="Code">${prepareCode(item)}</column>
+	<column title="Name">${item.name || ""}</column>
 </pagedtable>
 
 

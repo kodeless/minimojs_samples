@@ -9,7 +9,13 @@ type i_2 3;
 text val 1,2,3,;
 </div>
 
-<div data-xiterator-list="list" data-xiterator-var="item" data-xiterator-indexvar="i">
+<div>
+$for(item in list with i){
 <text id="i_${i}" bind="item.val"/>
+}
 </div>
-<div data-xiterator-list="list" data-xiterator-var="item" id="val">${item.val},</div>
+<div id="val">
+$for(item in list){
+${item.val},
+}
+</div>
