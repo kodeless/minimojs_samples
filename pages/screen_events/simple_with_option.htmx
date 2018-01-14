@@ -1,0 +1,16 @@
+<div id="instructions">
+text val;
+click btnAsk;
+click btnYes;
+text val yes;
+click btnAsk;
+click btnNo;
+text val no;
+</div>
+
+$when.ask(obj, opt){
+    <button id="btnYes" onclick="opt.yes()">Yes</button>
+    <button id="btnNo" onclick="opt.no()">No</button>
+}
+<div id="val">${obj.answer}</div>
+<button id="btnAsk" onclick="emit()">Emit</button>

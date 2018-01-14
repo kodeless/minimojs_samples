@@ -1,0 +1,13 @@
+<div id="instructions">
+notfound val;
+click btnAlert;
+text val ok;
+click btnConsume;
+notfound val;
+</div>
+
+$when.alert(obj, opt){
+    <div id="val">${obj.val}</div>
+    <button id="btnConsume" onclick="opt.consume()">Consume</button>
+}
+<button id="btnAlert" onclick="emit()">Emit</button>

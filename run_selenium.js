@@ -57,6 +57,8 @@ const execInstruction = ({
         setTimeout(resolve, 500);
       })
       .catch(e => reject(e));
+  } else if (command == "notfound") {
+    getElements(elementId).then(el => reject(new Error('Element should be not found'))).catch(e => resolve());
   } else if (command == "text") {
     getElements(elementId).then(el => {
         el.getText().then(text => {

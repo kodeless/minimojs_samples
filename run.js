@@ -39,12 +39,4 @@ minimo.generateMinimoJs({
   });
 
   server.listen(8080);
-
-  let pairs = _.pairs(testsToRun);
-  execTests(_.first(pairs), _.rest(pairs))
-    .then(() => {
-      buffer.print();
-      resolve();
-    })
-    .catch(reject);
 });
